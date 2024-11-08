@@ -1,16 +1,23 @@
+/* * {
+    color: #F09319;
+    background-color: #3D5300;
+} */
 body{
-    color: teal;
+    /* color: teal; */
+    background-color: #3D5300 ;
     background-image: url('');
 }
 
 .skills{
+    margin: 20px;
  display: flex;
+ width: 90%;
 flex-wrap: wrap;
 flex-direction: row;
- /* margin: 50px 200px;  */
  position: relative;
- /* padding: 10%; */
- 
+flex-wrap: wrap;
+align-content: center;
+justify-content: space-around; 
 
 }
 .skills ul{
@@ -27,18 +34,23 @@ flex-direction: row;
 
 }
 .about{
-    /* margin: 50px 400px;  */
-    color: black;
+    color: #FFE31A;
     text-align: center;
     overflow: visible;
-    font-family: 'DM Sans Merlin'
+    font-family: 'DM Sans Merlin';
+    margin-top: 100px;
+    background-color: #3D5300;
 }
 
 p{
     font-family: cursive;
+    color: #FF7777;
+    background-color: #3D5300;
+
 }
 h2{
-    color: black;
+    margin-top: 100px;
+    color: #FFE31A;
     text-align: center;
     overflow: visible;
     font-family: 'DM Sans Merlin'
@@ -56,4 +68,12 @@ h2{
     text-align: center;
     overflow: visible;
     font-family: 'DM Sans Merlin'
+}
+
+#main{
+    align-content: center;
+    margin: 10%;
+    background-color: #3D5300;
+    border-radius: 46px;
+    
 }
