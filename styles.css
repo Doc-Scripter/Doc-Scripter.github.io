@@ -1,3 +1,59 @@
 body{
     color: teal;
+    background-image: url('');
+}
+
+.skills{
+ display: flex;
+ flex-direction: row;
+ flex:1fr;
+ /* margin: 50px 200px;  */
+ position: relative;
+ /* padding: 10%; */
+ 
+
+}
+.skills ul{
+    border-style:groove ;
+    padding: 10%;
+    background-color: ghostwhite;
+}
+.skill{
+    /* margin: 50px 400px;  */
+    font-family: 'DM Sans Merlin';
+    text-align: center;
+    color: black;
+
+
+}
+.about{
+    /* margin: 50px 400px;  */
+    color: black;
+    text-align: center;
+    overflow: visible;
+    font-family: 'DM Sans Merlin'
+}
+
+p{
+    font-family: cursive;
+}
+h2{
+    color: black;
+    text-align: center;
+    overflow: visible;
+    font-family: 'DM Sans Merlin'
+}
+
+.projects{
+    color: black;
+    text-align: center;
+    overflow: visible;
+    font-family: 'DM Sans Merlin'
+}
+
+.articles{
+    color: black;
+    text-align: center;
+    overflow: visible;
+    font-family: 'DM Sans Merlin'
 }
