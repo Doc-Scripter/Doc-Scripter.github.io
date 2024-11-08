@@ -5,8 +5,8 @@ body{
 
 .skills{
  display: flex;
- flex-direction: row;
- flex:1fr;
+flex-wrap: wrap;
+flex-direction: row;
  /* margin: 50px 200px;  */
  position: relative;
  /* padding: 10%; */
