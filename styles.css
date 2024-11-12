@@ -15,6 +15,7 @@
 body {
     background-color: var(--dark-blue);
     color: white;
+    margin: 0 150px 
 }
 
 .nav-widget {
@@ -91,10 +92,15 @@ section.hidden {
     color: var(--bright-red);
     margin-bottom: 20px;
     text-align: center;
+    position: relative;
 }
 
 #intro{
     text-align: center;
+    font-weight:bold;
+    margin-top: 10%;
+    margin-left: 10%;
+    max-width:80%;
 }
 
 .subtitle {
