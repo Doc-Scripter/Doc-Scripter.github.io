@@ -65,6 +65,7 @@ body {
     background-color: var(--dark-red);
 }
 
+
 section {
     min-height: 100vh;
     padding: 80px 20px;
@@ -88,6 +89,7 @@ section.hidden {
     font-size: 3em;
     color: var(--bright-red);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .subtitle {
@@ -222,6 +224,11 @@ section.hidden {
     animation: shimmer 2s infinite;
 }
 
+
+.social-links a:hover{
+ transform: translateY(-10px);
+}
+
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -308,6 +315,10 @@ section.hidden {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.git:hover{
+  transform: translateY(-10px);
 }
 
 .submit-btn {
