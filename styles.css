@@ -6,26 +6,29 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+    /* box-sizing: border-box; */
     font-family: 'Arial', sans-serif;
 }
+/* *, *::after,::before{
+    box-sizing: border-box;
 
+} */
 body {
     background-color: var(--dark-blue);
     color: white;
-    margin: 0 150px 
+    /* margin: 0% 20%  */
 }
 
 .nav-widget {
     position: fixed;
-    right: 30px;
+    right: 10%;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--purple);
-    border-radius: 50px;
-    padding: 15px;
+    border-radius: 50%;
+    padding: 5%;
     z-index: 1000;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -88,9 +91,9 @@ section.hidden {
 
 .title {
     text-align: center;
-    font-size: 3em;
+    font-size: 300%;
     color: var(--bright-red);
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     text-align: center;
     position: relative;
 }
@@ -98,29 +101,35 @@ section.hidden {
 #intro{
     text-align: center;
     font-weight:bold;
-    margin-top: 10%;
-    margin-left: 10%;
-    max-width:80%;
+    font-size: larger;
+    /* margin-right: 4%; */
+    padding: 3%;
+   
+    /* max-width:100%; */
 }
 
 .subtitle {
-    font-size: 1.5em;
+    font-size: 150%;
     color: #fff;
     margin-bottom: 30px;
 }
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(70vw, 1fr));
+    gap: 5%;
+    overflow: hidden;
+    /* overflow-x: visible; */
+    padding: 5% ;
+    /* margin-right:10% ; */
 }
 
 .skill-card {
     background-color: var(--purple);
-    padding: 20px;
+    padding: 5%;
     border-radius: 15px;
     text-align: center;
+    overflow: hidden;
 }
 
 .projects-grid {
@@ -133,11 +142,12 @@ section.hidden {
 
 .project-card {
     background-color: var(--dark-red);
-    padding: 30px;
+    padding: 6%;
+    /* margin: 2%; */
     border-radius: 15px;
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
 }
 
@@ -192,10 +202,10 @@ section.hidden {
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 10%;
+    border-radius: 8%;
     background-color: var(--purple);
     display: flex;
     align-items: center;
