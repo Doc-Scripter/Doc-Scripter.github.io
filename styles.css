@@ -86,9 +86,14 @@ section.hidden {
 }
 
 .title {
+    text-align: center;
     font-size: 3em;
     color: var(--bright-red);
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#intro{
     text-align: center;
 }
 
