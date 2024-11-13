@@ -118,7 +118,24 @@ section.hidden {
     text-align: center;
     margin: 50px 0;
   }
+  .resume-container {
+    margin-top: 20px;
+  }
   
+  .download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--bright-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: var(--hover-color); /* Define --hover-color in your CSS variables */
+  }
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(70vw, 1fr));
