@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Add this to your existing script
     document
       .getElementById("contactForm")
       .addEventListener("submit", async function (e) {

@@ -23,16 +23,34 @@ body {
 
 .nav-widget {
     position: fixed;
-    right: 10%;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--purple);
-    border-radius: 50%;
-    padding: 5%;
+    border-radius: 50px;
+    padding: 2%;
     z-index: 1000;
     transition: all 0.3s ease;
     cursor: pointer;
 }
+/* 
+.nav-widget {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--purple);
+    border-radius: 50px;
+    padding: 15px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-widget.expanded {
+    border-radius: 25px;
+    padding: 20px;
+} */
 
 .nav-widget.expanded {
     border-radius: 25px;
@@ -138,12 +156,12 @@ section.hidden {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     /* overflow: hidden; */
     /* overflow-x: visible; */
     /* padding: 5% ; */
-    /* margin-right:10% ; */
+    margin-right:40px ;
 }
 
 .skill-card {
@@ -416,6 +434,7 @@ section.hidden {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    display: inline-block;
 }
 
 .highlight-card {
@@ -424,6 +443,7 @@ section.hidden {
     padding: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    overflow: auto;
 }
 
 .highlight-header {
