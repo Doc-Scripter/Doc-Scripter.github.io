@@ -6,16 +6,17 @@
 }
 
 * {
-    /* margin: 0;
-    padding: 0; */
-    /* box-sizing: border-box; */
-    font-family: 'Arial', sans-serif;
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 /* *, *::after,::before{
     box-sizing: border-box;
-
-} */
-body {
+    
+    } */
+    body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     background-color: var(--dark-blue);
     color: white;
     /* margin: 0% 20%  */
@@ -32,6 +33,18 @@ body {
     z-index: 1000;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+#hero p{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 5px;
+}
+#shoutout{
+    color: var(--bright-red);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 /* 
 .nav-widget {
@@ -109,7 +122,7 @@ section.hidden {
 
 .title {
     text-align: center;
-    font-size: 250%;
+    font-size: 2.5rem;
     color: var(--bright-red);
     margin: 5%;
     text-align: center;
@@ -125,11 +138,24 @@ section.hidden {
    
     /* max-width:100%; */
 }
+.subtitle-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20;
+}
 
 .subtitle {
-    font-size: 150%;
+   
+    background-color: var(--purple);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    overflow: hidden;
+    /* font-size: 1.2rem;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
 }
 
 #resume {
@@ -143,7 +169,7 @@ section.hidden {
   .download-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--bright-red);
+    background-color: var(--dark-red);
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -151,23 +177,21 @@ section.hidden {
   }
   
   .download-btn:hover {
-    background-color: var(--hover-color); /* Define --hover-color in your CSS variables */
+    background-color: var(--bright-red);
   }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    /* overflow: hidden; */
-    /* overflow-x: visible; */
-    /* padding: 5% ; */
-    margin-right:40px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .skill-card {
     background-color: var(--purple);
-    padding: 5%;
-    border-radius: 15px;
+    padding: 10px 20px;
+    border-radius: 50px;
     text-align: center;
     overflow: hidden;
 }
@@ -178,6 +202,7 @@ section.hidden {
     /* justify-content: center; */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    padding: 20px;
     /* padding: 20%; */
     /* margin:5%;
     position: relative;
@@ -195,8 +220,8 @@ section.hidden {
 
 .project-card {
     background-color: var(--dark-red);
-    padding: 10%;
-    margin: 5%;
+    padding: 25px;
+    margin: 15px;
     border-radius: 15px;
     transition: all 0.3s ease;
     /* position: relative; */
@@ -226,6 +251,11 @@ section.hidden {
     flex-wrap: wrap;
     margin-top: 15px;
 }
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+  }
 
 .tech-tag {
     background-color: var(--purple);
@@ -306,9 +336,10 @@ section.hidden {
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 20px;
     padding: 20px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    margin: 40px 260px ;
 }
 
 .article-card {
@@ -432,9 +463,9 @@ section.hidden {
 
 .journey-container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0 270px;
     display: inline-block;
+    
 }
 
 .highlight-card {
