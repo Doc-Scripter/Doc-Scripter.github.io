@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
     const navWidget = document.querySelector(".nav-widget");
     const sections = document.querySelectorAll("section");
     const scrollToTopBtn = document.createElement('button');
@@ -66,35 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document
-      .getElementById("contactForm")
-      .addEventListener("submit", async function (e) {
-        e.preventDefault();
 
-        const formData = new FormData(this);
-        const formStatus = document.getElementById("formStatus");
-
-        const mailtoLink = `mailto:clifford242526@gmail.com?subject=Portfolio Contact: ${formData.get(
-          "name"
-        )}&body=From: ${formData.get(
-          "email"
-        )}%0D%0A%0D%0A${formData.get(
-          "message"
-        )}`;
-
-        try {
-          window.location.href = mailtoLink;
-
-          formStatus.textContent = "Opening your email client...";
-          formStatus.className = "form-status success";
-
-          this.reset();
-        } catch (error) {
-          formStatus.textContent =
-            "Error sending message. Please try again or email directly.";
-          formStatus.className = "form-status error";
-        }
-      });
 
     document.querySelectorAll(".highlight-card").forEach((card) => {
       card.addEventListener("click", function () {
@@ -108,6 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
         gallery.classList.toggle("active");
       });
     });
-
-
-  });
+});

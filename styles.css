@@ -366,51 +366,30 @@ footer {
 
 .project-card {
   background-color: var(--white);
-  border-radius: 12px; /* More rounded corners */
+  border-radius: 15px; /* More rounded corners */
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger, more diffused shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger, more diffused shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
-  transform: translateY(-12px); /* Even more pronounced lift */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
-.project-image {
-  width: 100%;
-  height: 220px; /* Slightly increased height for images */
-  overflow: hidden;
-  border-radius: 12px 12px 0 0; /* Match card border-radius, top only */
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the area, cropping if necessary */
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.1); /* More pronounced zoom on hover */
+  transform: translateY(-15px); /* Even more pronounced lift */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
   font-size: 1.8rem;
   color: var(--dark-gray);
-  padding: 15px 20px 0;
+  padding: 20px 25px 0;
 }
 
 .project-card p {
   font-size: 1rem;
   color: var(--text-color);
-  padding: 0 20px 15px;
+  padding: 0 25px 20px;
   flex-grow: 1;
 }
 
@@ -543,20 +522,23 @@ footer {
 
 .journey-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px; /* Increased gap for journey items */
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px; /* Further increased gap for journey items */
+  padding: 30px;
 }
 
 .highlight-card {
   background-color: var(--white);
-  border-radius: 15px; /* More rounded corners */
-  padding: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px; /* Even more rounded corners */
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /* Even stronger shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .highlight-card::before {
