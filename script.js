@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navWidget = document.querySelector(".nav-widget");
+    const dragHint = document.querySelector(".drag-hint");
     const sections = document.querySelectorAll("section");
     const scrollToTopBtn = document.createElement('button');
 
@@ -7,6 +8,19 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollToTopBtn.id = 'scrollToTopBtn';
     scrollToTopBtn.innerHTML = '&uarr;'; // Up arrow
     document.body.appendChild(scrollToTopBtn);
+
+    let hoverTimeout;
+
+    navWidget.addEventListener("mouseenter", () => {
+      hoverTimeout = setTimeout(() => {
+        dragHint.classList.add("show");
+      }, 1000); // 1 second delay
+    });
+
+    navWidget.addEventListener("mouseleave", () => {
+      clearTimeout(hoverTimeout);
+      dragHint.classList.remove("show");
+    });
 
     navWidget.addEventListener("click", () => {
       navWidget.classList.toggle("expanded");
