@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
       navWidget.classList.toggle("expanded");
     });
 
+
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -106,4 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
         gallery.classList.toggle("active");
       });
     });
+
+
   });
