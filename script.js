@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navWidget = document.querySelector(".nav-widget");
     const sections = document.querySelectorAll("section");
+    const scrollToTopBtn = document.createElement('button');
+
+    // Create and append scroll-to-top button
+    scrollToTopBtn.id = 'scrollToTopBtn';
+    scrollToTopBtn.innerHTML = '&uarr;'; // Up arrow
+    document.body.appendChild(scrollToTopBtn);
 
     navWidget.addEventListener("click", () => {
       navWidget.classList.toggle("expanded");
@@ -34,7 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
         targetSection.scrollIntoView({
           behavior: "smooth",
         });
+        // Close nav widget after clicking a link
+        if (navWidget.classList.contains('expanded')) {
+            navWidget.classList.remove('expanded');
+        }
       });
+    });
+
+    // Show/hide scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Show button after scrolling 300px
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     document
@@ -47,7 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const mailtoLink = `mailto:clifford242526@gmail.com?subject=Portfolio Contact: ${formData.get(
           "name"
-        )}&body=From: ${formData.get("email")}%0D%0A%0D%0A${formData.get(
+        )}&body=From: ${formData.get(
+          "email"
+        )}%0D%0A%0D%0A${formData.get(
           "message"
         )}`;
 
