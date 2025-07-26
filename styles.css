@@ -15,7 +15,7 @@
 body {
   font-family: 'Roboto', sans-serif; /* Modern font */
   line-height: 1.6;
-  background-color: var(--white); /* Light background for professionalism */
+  background: linear-gradient(135deg, var(--dark-blue), var(--purple));
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -32,10 +32,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-.title {
+#title {
   text-align: center;
   font-size: 3.5rem; /* Larger title */
-  color: var(--accent-color); /* Professional accent color */
+  color: var(--bright-red); /* Professional accent color */
   margin: 5% auto; /* Center and add margin */
   position: relative;
   padding-bottom: 15px;
@@ -56,12 +56,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Sections */
 section {
   min-height: 100vh;
-  padding: 80px 5%; /* More padding for spacious feel */
+  padding: 80px 5%;
   opacity: 1;
   transition: opacity 0.5s ease;
-  background-color: var(--white);
   color: var(--text-color);
-  border-bottom: 1px solid var(--light-gray); /* Section separators */
+  border-bottom: 1px solid var(--light-gray);
 }
 
 
@@ -1025,13 +1024,11 @@ section.hidden {
 }
 
 .project-card {
-  background-color: var(--dark-red);
+  background-color: var(--white);
   padding: 25px;
   margin: 15px;
   border-radius: 15px;
   transition: all 0.3s ease;
-  /* position: relative; */
-  /* overflow: hidden; */
   cursor: pointer;
 }
 
@@ -1158,7 +1155,7 @@ section.hidden {
 }
 
 .article-card {
-  background-color: var(--dark-red);
+  background-color: var(--white);
   padding: 30px;
   border-radius: 15px;
   transition: all 0.3s ease;
