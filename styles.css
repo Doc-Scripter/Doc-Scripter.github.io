@@ -189,9 +189,14 @@ footer {
 .nav-dot {
   width: 30px;
   height: 30px;
-  background-color: var(--accent-color); /* Accent color dot */
+  background-color: var(--white); /* Normal state: white */
   border-radius: 50%;
   animation: pulse 2s infinite;
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-widget:hover .nav-dot {
+  background-color: var(--bright-red); /* On hover: vibrant red */
 }
 
 .nav-links {
@@ -537,23 +542,42 @@ footer {
 }
 
 .journey-container {
-  display: flex;
-  flex-direction: column;
-  gap: 50px; /* Increased gap for journey items */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px; /* Increased gap for journey items */
   padding: 20px;
 }
 
 .highlight-card {
   background-color: var(--white);
-  border-radius: 12px; /* More rounded corners */
+  border-radius: 15px; /* More rounded corners */
   padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--bright-red), var(--accent-color));
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover::before {
+  transform: translateY(0%);
 }
 
 .highlight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-15px) scale(1.02); /* More pronounced lift and slight scale */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Even stronger shadow */
 }
 
 .highlight-header {
