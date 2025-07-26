@@ -53,9 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
         navWidget.classList.remove("expanded");
         const targetId = this.getAttribute("href");
         const targetSection = document.querySelector(targetId);
-        targetSection.scrollIntoView({
-          behavior: "smooth",
-        });
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
         // Close nav widget after clicking a link
         if (navWidget.classList.contains('expanded')) {
             navWidget.classList.remove('expanded');
