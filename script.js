@@ -103,6 +103,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let hasMoved = false; // New variable to track if actual dragging occurred
 
     navWidget.addEventListener('mousedown', (e) => {
+      if (navWidget.classList.contains('expanded')) {
+        return; // Do not allow dragging when expanded
+      }
       isDragging = true;
       hasMoved = false; // Reset on mousedown
       navWidget.style.cursor = 'grabbing';
