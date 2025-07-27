@@ -80,9 +80,10 @@ footer {
 }
 
 #footer-title {
-  font-size: 2.5rem;
-  color: var(--bright-red);
-  margin-bottom: 30px;
+      font-size: 2.5rem;
+    color: var(--bright-red);
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .footer-content {
@@ -104,15 +105,15 @@ footer {
 }
 
 .footer-left h3, .footer-right h3 {
-  color: var(--accent-color);
+  color: var(--bright-red);
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
 .footer-left .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+      display: flex;
+    justify-content: start;
+    gap: 25px;
 }
 
 .footer-left .social-links a {
@@ -132,18 +133,20 @@ footer {
 }
 
 .footer-right .download-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: var(--bright-red);
-  color: var(--white);
-  text-decoration: none;
-  border-radius: 25px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: 600;
+      margin-left: 180px;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--bright-red);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
 }
 
 .footer-right .download-btn:hover {
   background-color: var(--accent-color);
+  border: solid 1px var(--bright-red) ;
   transform: translateY(-3px);
 }
 
