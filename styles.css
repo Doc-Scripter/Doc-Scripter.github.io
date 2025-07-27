@@ -1,14 +1,13 @@
 :root {
-  --dark-blue: #2b2e4a;
-  --bright-red: #e84545;
-  --dark-red: #903749;
-  --purple: #53354a;
-  --light-gray: #f0f0f0;
-  --dark-gray: #333;
-  --accent-color: #007bff;
-  --text-color: #333;
-  --white: #ffffff;
-  --black: #000000;
+      --dark-blue: #2b2e4a;
+    --bright-red: #e84545;
+    --purple: #651f50;
+    --light-gray: #f0f0f0;
+    --dark-gray: #333;
+    --accent-color: #651f50;
+    --text-color: #333;
+    --white: #ffffff;
+    --black: #000000;
 }
 
 /* General Body and Typography */
@@ -55,8 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sections */
 section {
-  min-height: 100vh;
-  padding: 80px 5%;
+  padding: 5%;
   opacity: 1;
   transition: opacity 0.5s ease;
   color: var(--white);
@@ -149,17 +147,7 @@ footer {
   transform: translateY(-3px);
 }
 
-/* Responsive adjustments for footer */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .footer-left, .footer-right {
-    width: 90%;
-  }
-}
 
 /* Journey Section Styles */
 #journey {
@@ -170,12 +158,12 @@ footer {
   margin-bottom: 20px;
 }
 
-.journey-container {
+/* .journey-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   padding: 20px 0;
-}
+} */
 
 .highlight-card {
   background-color: rgba(255, 255, 255, 0.08);
@@ -261,24 +249,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsive adjustments for Journey section */
-@media (max-width: 768px) {
-  .journey-container {
-    grid-template-columns: 1fr;
-  }
 
-  .highlight-card {
-    padding: 20px;
-  }
-
-  .highlight-title {
-    font-size: 1.4rem;
-  }
-
-  .photo-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-}
 
 
 
@@ -450,10 +421,14 @@ footer {
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px 0;
+display: flex
+;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    gap: 20px;
+    padding: 20px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .skill-category {
@@ -470,7 +445,7 @@ footer {
 }
 
 .skill-category h3 {
-  color: var(--primary-color);
+  color: var(--bright-red);
   font-size: 1.5em;
   margin-bottom: 15px;
   border-bottom: 2px solid var(--light-gray);
@@ -644,7 +619,7 @@ footer {
 .article-meta .read-link {
   display: inline-block;
   padding: 8px 15px;
-  background-color: var(--accent-color);
+  background-color: var(--bright-red);
   color: var(--white);
   text-decoration: none;
   border-radius: 20px; /* Pill shape for read link */
@@ -653,7 +628,7 @@ footer {
 }
 
 .article-meta .read-link:hover {
-  background-color: var(--bright-red);
+  background-color: var(--purple);
   transform: translateY(-3px);
 }
 
@@ -663,10 +638,11 @@ footer {
 }
 
 .journey-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 50px; /* Further increased gap for journey items */
-  padding: 30px;
+      padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .highlight-card {
@@ -936,154 +912,9 @@ footer .social-links a:hover {
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .nav-widget {
-    right: 10px;
-    top: 20px;
-    transform: none;
-    padding: 10px;
-  }
 
-  .nav-widget.expanded {
-    padding: 15px;
-    width: 150px; /* Adjust width for smaller screens */
-  }
 
-  .nav-links a {
-    padding: 3px 10px;
-  }
 
-  section {
-    padding: 60px 15px;
-  }
-
-  .title {
-    font-size: 2.5rem; /* Adjusted for smaller screens */
-    margin: 8% 0;
-  }
-
-  #hero .title {
-    font-size: 3.5rem;
-  }
-
-  .subtitle-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    padding: 8px 15px;
-  }
-
-  #intro {
-    font-size: 1em;
-  }
-
-  #shoutout {
-    font-size: 1.3em;
-  }
-
-  .skills-container,
-  .projects-grid,
-  .articles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card,
-  .article-card {
-    margin-bottom: 20px;
-  }
-
-  .highlight-card {
-    padding: 15px;
-  }
-
-  .photo-gallery {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .highlight-photo img {
-    width: 100%;
-    height: auto;
-  }
-
-  .contact-container {
-    padding: 20px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-  }
-
-  .contact-form button {
-    padding: 12px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-widget {
-    right: 5px;
-    top: 10px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  #hero .title {
-    font-size: 3rem;
-  }
-
-  #intro {
-    padding: 2%;
-    font-size: 0.9em;
-  }
-
-  .download-btn {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  .skill-card {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  .project-card h3,
-  .article-card h3 {
-    font-size: 1.4em;
-  }
-
-  .project-card p,
-  .article-card p {
-    font-size: 0.9em;
-  }
-
-  .tech-tag,
-  .article-meta span {
-    font-size: 0.8em;
-  }
-
-  .read-link {
-    font-size: 0.9em;
-  }
-
-  .highlight-title {
-    font-size: 1.2em;
-  }
-
-  .photo-indicator span {
-    font-size: 0.8em;
-  }
-
-  .contact-form label {
-    font-size: 0.9em;
-  }
-}
 
 #scrollToTopBtn {
   display: none; /* Hidden by default */
@@ -1170,141 +1001,6 @@ section.hidden {
   display: grid;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .nav-widget {
-    right: 10px;
-    top: 20px;
-    transform: none;
-    padding: 10px;
-  }
-
-  .nav-widget.expanded {
-    padding: 15px;
-  }
-
-  .nav-links a {
-    padding: 3px 10px;
-  }
-
-  section {
-    padding: 60px 15px;
-  }
-
-  .title {
-    font-size: 2rem;
-    margin: 8% 0;
-  }
-
-  .subtitle-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    padding: 8px 15px;
-  }
-
-  #hero p {
-    font-size: 0.9em;
-  }
-
-  .skills-container,
-  .projects-grid,
-  .articles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card,
-  .article-card {
-    margin-bottom: 20px;
-  }
-
-  .highlight-card {
-    padding: 15px;
-  }
-
-  .photo-gallery {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .highlight-photo img {
-    width: 100%;
-    height: auto;
-  }
-
-  .contact-form {
-    padding: 20px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-  }
-
-  .contact-form button {
-    padding: 12px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-widget {
-    right: 5px;
-    top: 10px;
-  }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  #intro {
-    padding: 2%;
-    font-size: medium;
-  }
-
-  .download-btn {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  .skill-card {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  .project-card h3,
-  .article-card h3 {
-    font-size: 1.2em;
-  }
-
-  .project-card p,
-  .article-card p {
-    font-size: 0.9em;
-  }
-
-  .tech-tag,
-  .article-meta span {
-    font-size: 0.8em;
-  }
-
-  .read-link {
-    font-size: 0.9em;
-  }
-
-  .highlight-title {
-    font-size: 1em;
-  }
-
-  .photo-indicator span {
-    font-size: 0.8em;
-  }
-
-  .contact-form label {
-    font-size: 0.9em;
-  }
-}
 
 
 .highlight-title a {
@@ -1573,20 +1269,15 @@ section.hidden {
 
 
 
-.journey-container {
-  /* max-width: 800px;
-  margin: 0 270px; */
-  padding: 20px;
-  display: inline-block;
-}
+
 
 .highlight-card {
-  background-color: var(--purple);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  overflow: auto;
+     background-color: var(--purple);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    overflow: auto;
 }
 
 .highlight-header {
@@ -1640,47 +1331,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-@media (max-width: 480px) {
-  .nav-widget {
-    position: fixed;
-    transform: translateY(-50%);
-    /* top:300px; */
-    /* bottom: 20px; */
-    right: 0px;
-    z-index: 1000;
-  }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-  }
 
-  .nav-widget.expanded .nav-links {
-    display: flex;
-  }
-  .nav-widget.expanded {
-    border-radius: 25px;
-    padding: 20px;
-  }
 
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    /* margin-top: 40px; */
-    margin: 40px auto;
-  }
-}
-
-/* @media (max-width: 320px) { */
-/* } */
-@media (max-width: 768px) {
-}
-@media (max-width: 1024px) {
-}
-@media (max-width: 1280px) {
-}
-@media (max-width: 1440px) {
-}
