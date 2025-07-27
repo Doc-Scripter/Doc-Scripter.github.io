@@ -100,9 +100,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Make nav-widget draggable and snappable
     let isDragging = false;
     let offsetX, offsetY;
+    let hasMoved = false; // New variable to track if actual dragging occurred
 
     navWidget.addEventListener('mousedown', (e) => {
       isDragging = true;
+      hasMoved = false; // Reset on mousedown
       navWidget.style.cursor = 'grabbing';
       offsetX = e.clientX - navWidget.getBoundingClientRect().left;
       offsetY = e.clientY - navWidget.getBoundingClientRect().top;
@@ -111,6 +113,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
+
+      // Check if mouse has moved significantly to consider it a drag
+      if (Math.abs(e.clientX - (navWidget.getBoundingClientRect().left + offsetX)) > 5 ||
+          Math.abs(e.clientY - (navWidget.getBoundingClientRect().top + offsetY)) > 5) {
+        hasMoved = true;
+      }
 
       let newLeft = e.clientX - offsetX;
       let newTop = e.clientY - offsetY;
@@ -129,26 +137,29 @@ document.addEventListener("DOMContentLoaded", function() {
         navWidget.style.cursor = 'grab';
         navWidget.style.transition = 'left 0.3s ease-in-out, right 0.3s ease-in-out, top 0.3s ease-in-out'; // Re-enable transition
 
-        const widgetRect = navWidget.getBoundingClientRect();
-        const viewportWidth = window.innerWidth;
+        // Only apply snap logic if an actual drag occurred
+        if (hasMoved) {
+          const widgetRect = navWidget.getBoundingClientRect();
+          const viewportWidth = window.innerWidth;
 
-        // Determine which side to snap to
-        if (widgetRect.left + widgetRect.width / 2 < viewportWidth / 2) {
-          // Snap to left
-          navWidget.style.left = '30px';
-          navWidget.style.right = 'auto';
-        } else {
-          // Snap to right
-          navWidget.style.right = '30px';
-          navWidget.style.left = 'auto';
-        }
+          // Determine which side to snap to
+          if (widgetRect.left + widgetRect.width / 2 < viewportWidth / 2) {
+            // Snap to left
+            navWidget.style.left = '30px';
+            navWidget.style.right = 'auto';
+          } else {
+            // Snap to right
+            navWidget.style.right = '30px';
+            navWidget.style.left = 'auto';
+          }
 
-        // Ensure top position is valid after snap
-        let currentTop = parseFloat(navWidget.style.top);
-        if (currentTop < 0) {
-          navWidget.style.top = '0px';
-        } else if (currentTop + widgetRect.height > window.innerHeight) {
-          navWidget.style.top = `${window.innerHeight - widgetRect.height}px`;
+          // Ensure top position is valid after snap
+          let currentTop = parseFloat(navWidget.style.top);
+          if (currentTop < 0) {
+            navWidget.style.top = '0px';
+          } else if (currentTop + widgetRect.height > window.innerHeight) {
+            navWidget.style.top = `${window.innerHeight - widgetRect.height}px`;
+          }
         }
       }
     });
