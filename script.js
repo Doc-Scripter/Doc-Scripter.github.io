@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
           // Ensure top position is valid after snap
           let currentTop = parseFloat(navWidget.style.top);
-          if (currentTop < 0) {
-            navWidget.style.top = '0px';
+          if (currentTop < 40) {
+            navWidget.style.top = '40px';
           } else if (currentTop + widgetRect.height > window.innerHeight) {
             navWidget.style.top = `${window.innerHeight - widgetRect.height}px`;
           }
