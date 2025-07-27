@@ -133,8 +133,6 @@ footer {
 }
 
 .footer-right .download-btn {
-      margin-left: 180px;
-    display: inline-block;
     padding: 12px 25px;
     background-color: var(--bright-red);
     color: var(--white);
@@ -144,12 +142,23 @@ footer {
     font-weight: 600;
 }
 
+.footer-right{
+      display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .footer-right .download-btn:hover {
   background-color: var(--accent-color);
   border: solid 1px var(--bright-red) ;
   transform: translateY(-3px);
 }
 
+#footer-download-btn{
+    /* justify-items: center; */
+    display: flex;
+    justify-content: space-around;
+}
 
 
 /* Journey Section Styles */
