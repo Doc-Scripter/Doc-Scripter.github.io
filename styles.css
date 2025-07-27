@@ -567,10 +567,15 @@ display: flex
 }
 
 .articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px; /* Increased gap for more breathing room */
-  padding: 20px;
+      display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    /* margin-top: 40px; */
+    /* margin: 40px 260px; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .article-card {
