@@ -312,6 +312,7 @@ footer {
 }
 
 .nav-dot {
+  /* opacity: 0; */
   width: 30px;
   height: 30px;
   background-color: var(--white); /* Normal state: white */
