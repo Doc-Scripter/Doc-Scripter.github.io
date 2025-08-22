@@ -48,6 +48,68 @@
   margin-bottom: 10px;
   display: block;
 }
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+
+}
+
+.skill-category {
+  background-color: var(--white);
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: var(--bright-red);
+  font-size: 1.3em;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+
+.skill-category li {
+  list-style: none;
+  font-size: 0.9em;
+  padding: 8px 0;
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--light-gray);
+}
+#title {
+  text-align: center;
+  font-size: 1.8rem; /* Larger title */
+  color: var(--bright-red); /* Professional accent color */
+  margin: 20% auto; /* Center and add margin */
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--bright-red); /* Subtle underline */
+  border-radius: 2px;
+}
+
+
 #intro {
   max-width: 800px; /* Constrain width for readability */
   margin: 0 auto;
@@ -55,4 +117,70 @@
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
 }
+
+.project-card h3 {
+  font-size: 1.8rem;
+  /* padding: 5px 5px; */
+  /* text-align: start; */
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  /* padding-left: 5px; */
+  flex-grow: 1;
+}
+
+.project-tech {
+  /* padding: 0 20px 15px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: var(--accent-color); /* Use accent color for tech tags */
+  color: var(--white);
+  /* padding: 6px 12px; */
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  border-top: 1px solid var(--light-gray);
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 25px; /* More rounded buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  background-color: var(--bright-red);
+  transform: translateY(-3px);
+}
+/* Projects Section */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px; /* Increased gap for more breathing room */
+  padding: 20px;
+}
+
+
+.project-card:hover {
+  transform: translateY(-15px); /* Even more pronounced lift */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
 }
