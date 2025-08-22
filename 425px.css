@@ -182,5 +182,69 @@ h3 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Articles Section */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 5px;
+}
+
+.article-card p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+
+.article-meta {
+  font-size: 0.9rem;
+
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--light-gray);
+}
+
+.article-meta .read-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: var(--bright-red);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 20px; 
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.article-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article-platform {
+  display: inline-block;
+  background-color: var(--purple);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.article-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: var(--bright-red);
+}
+
 
 }
