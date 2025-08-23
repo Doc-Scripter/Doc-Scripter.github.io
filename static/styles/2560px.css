@@ -1,5 +1,7 @@
 @media (max-width: 2560px) {
-
+ p{
+  font-size: 1.6em;
+}
  
  .nav-arrows {
   position: fixed;
@@ -50,11 +52,6 @@
   padding: 100px 5%;
 }
 
-#hero .title {
-  color: var(--white); /* White title on dark background */
-  font-size: 4.5rem;
-  margin-bottom: 20px;
-}
 
 .subtitle-container {
   display: flex;
@@ -64,15 +61,7 @@
   margin-bottom: 30px;
 }
 
-.subtitle {
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  padding: 8px 20px;
-  border-radius: 25px; /* More rounded */
-  color: var(--white);
-  font-size: 1.1rem;
-  font-weight: 300;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-}
+
 
 #intro {
   max-width: 800px; /* Constrain width for readability */
@@ -102,7 +91,7 @@
 }
 #hero .title {
   color: var(--white); /* White title on dark background */
-  font-size: 38px;
+  font-size: 4em;
   margin-bottom: 10px;
 }
 
@@ -120,7 +109,7 @@
   padding: 8px 20px;
   border-radius: 25px; /* More rounded */
   color: var(--white);
-  font-size: 0.73rem;
+  font-size: 1.1rem;
   font-weight: 300;
   border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
 }
@@ -231,12 +220,7 @@ footer .social-links a {
   transition: color 0.2s ease;
 }
 
-.project-card p {
-  font-size: 0.9rem;
-  color: var(--text-color);
-  /* padding-left: 5px; */
-  flex-grow: 1;
-}
+
 
 .project-tech {
   /* padding: 0 20px 15px; */
@@ -630,8 +614,8 @@ footer .social-links a {
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--bright-red);

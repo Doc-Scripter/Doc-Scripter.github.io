@@ -70,7 +70,6 @@
   padding: 8px 20px;
   border-radius: 25px; /* More rounded */
   color: var(--white);
-  font-size: 0.73rem;
   font-weight: 300;
   border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
 }

@@ -100,10 +100,7 @@ footer {
   transform: translateY(-5px);
 }
 
-.footer-right p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
+
 
 .footer-right .download-btn {
     padding: 12px 25px;
@@ -407,10 +404,6 @@ section.hidden {
   color: var(--bright-red);
 }
 
-.project-card p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
 
 .project-tech {
   display: flex;
