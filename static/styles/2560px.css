@@ -1,0 +1,113 @@
+@media (max-width: 2560px) {
+    /* Navigation Widget */
+.nav-widget {
+  position: fixed;
+  right: 30px; /* Always pinned to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  left: auto; /* Ensure left is not fixed */
+  background-color: var(--dark-gray); /* Darker, professional background */
+  border-radius: 50px; /* Pill shape */
+  padding: 15px; /* Increased padding */
+  z-index: 1000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.drag-hint {
+  position: absolute;
+  top: -30px; /* Position above the widget */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+}
+
+.drag-hint.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-widget.expanded {
+  border-radius: 10px; /* More rectangular when expanded */
+  padding: 20px;
+  width: 180px; /* Fixed width for expanded state */
+}
+
+.nav-dot {
+  /* opacity: 0; */
+  width: 30px;
+  height: 30px;
+  background-color: var(--white); /* Normal state: white */
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-widget:hover .nav-dot {
+  background-color: var(--bright-red); /* On hover: vibrant red */
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px; /* Reduced gap */
+  margin-top: 15px; /* Space from dot */
+}
+
+.nav-links a {
+  color: var(--white); /* White text on dark background */
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: var(--bright-red); /* Highlight on hover */
+  transform: translateX(5px); /* Slight movement */
+}
+
+.nav-arrows {
+  display: none; /* Hidden by default */
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.nav-arrow {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem; /* Larger arrows */
+  text-align: center;
+  width: 100%; /* Take full width of parent */
+  box-sizing: border-box;
+}
+
+.nav-arrow.prev::before {
+  content: '\2191'; /* Up arrow */
+}
+
+.nav-arrow.next::before {
+  content: '\2193'; /* Down arrow */
+}
+
+.nav-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+}
