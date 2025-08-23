@@ -1,9 +1,45 @@
 @media (max-width: 425px) {
+ .nav-widget {
+  display: none;
+ }
+ 
+ .nav-arrows {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ }
+ 
+ .nav-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bright-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+ }
+ 
+ .nav-arrow.prev::before {
+  content: '↑';
+  font-size: 20px;
+  color: white;
+ }
+ 
+ .nav-arrow.next::before {
+  content: '↓';
+  font-size: 20px;
+  color: white;
+ }
+
      h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif; /* Stronger font for headings */
+  font-family: 'Montserrat', sans-serif;
   color: var(--dark-gray);
-  /* margin-bottom: 2px; */
-}
+ }
 /* Hero Section */
 #hero {
   display: flex;

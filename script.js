@@ -2,12 +2,77 @@ document.addEventListener("DOMContentLoaded", function() {
     const navWidget = document.querySelector(".nav-widget");
     const dragHint = document.querySelector(".drag-hint");
     const sections = document.querySelectorAll("section");
-    const scrollToTopBtn = document.createElement('button');
 
-    // Create and append scroll-to-top button
-    scrollToTopBtn.id = 'scrollToTopBtn';
-    scrollToTopBtn.innerHTML = '&uarr;'; // Up arrow
-    document.body.appendChild(scrollToTopBtn);
+
+    // Navigation arrows for small screens
+    const navArrows = document.querySelector('.nav-arrows');
+    const prevArrow = document.querySelector('.nav-arrow.prev');
+    const nextArrow = document.querySelector('.nav-arrow.next');
+
+    let currentSectionIndex = 0;
+
+    function updateNavArrows() {
+        if (currentSectionIndex === 0) {
+            prevArrow.style.display = 'none';
+        } else {
+            prevArrow.style.display = 'block';
+        }
+
+        if (currentSectionIndex === sections.length - 1) {
+            nextArrow.style.display = 'none';
+        } else {
+            nextArrow.style.display = 'block';
+        }
+    }
+
+    prevArrow.addEventListener('click', () => {
+        if (currentSectionIndex > 0) {
+            currentSectionIndex--;
+            sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+            updateNavArrows();
+        }
+    });
+
+    nextArrow.addEventListener('click', () => {
+        if (currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+            updateNavArrows();
+        }
+    });
+
+    // Initial update
+    updateNavArrows();
+
+    // Update arrows on scroll
+    window.addEventListener('scroll', () => {
+        let newIndex = 0;
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                newIndex = index;
+            }
+        });
+        if (newIndex !== currentSectionIndex) {
+            currentSectionIndex = newIndex;
+            updateNavArrows();
+        }
+    });
+
+    // Hide nav-widget and show nav-arrows on small screens
+    function handleScreenSizeChange() {
+        if (window.innerWidth <= 425) {
+            navWidget.style.display = 'none';
+            navArrows.style.display = 'flex';
+        } else {
+            navWidget.style.display = 'flex';
+            navArrows.style.display = 'none';
+        }
+    }
+
+    // Initial check and add listener
+    handleScreenSizeChange();
+    window.addEventListener('resize', handleScreenSizeChange);
 
     let hoverTimeout;
 
@@ -104,22 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-    // Show/hide scroll-to-top button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
 
-    // Scroll to top when button is clicked
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
 
 
 

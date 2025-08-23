@@ -195,6 +195,79 @@ footer {
   color: var(--accent-color);
 }
 
+.nav-widget {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex; /* Ensure it's displayed by default */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--bright-red);
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drag-hint {
+  font-size: 0.8em;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-widget:hover .drag-hint {
+  opacity: 1;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-widget.active .nav-links {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--light-gray);
+}
+
+.nav-arrows {
+  display: none; /* Hidden by default on larger screens */
+}
+
+.nav-arrow {
+  display: none; /* Hidden by default on larger screens */
+}
+
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -286,28 +359,7 @@ footer .social-links a:hover {
 
 
 
-#scrollToTopBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: var(--accent-color); /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.3s;
-}
 
-#scrollToTopBtn:hover {
-  background-color: var(--bright-red); /* Add a darker background on hover */
-  transform: translateY(-3px);
-}
 
 * {
   margin: 0;
