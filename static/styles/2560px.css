@@ -548,30 +548,19 @@ footer .social-links a {
   transition: background-color 0.3s ease; /* Smooth transition for color change */
 }
 
-.nav-widget:hover .nav-dot {
-  background-color: var(--bright-red); /* On hover: vibrant red */
-}
+
 
 .nav-links {
-  display: none;
-  flex-direction: column;
   gap: 10px; /* Reduced gap */
   margin-top: 15px; /* Space from dot */
 }
 
 .nav-links a {
-  color: var(--white); /* White text on dark background */
-  text-decoration: none;
   padding: 8px 15px;
-  border-radius: 5px; /* Slightly rounded corners */
-  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
   font-weight: 500;
 }
 
-.nav-links a:hover {
-  background-color: var(--bright-red); /* Highlight on hover */
-  transform: translateX(5px); /* Slight movement */
-}
+
 
 .nav-arrows {
   display: none; /* Hidden by default */
