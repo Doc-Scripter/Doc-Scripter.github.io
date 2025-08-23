@@ -89,46 +89,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navWidget.addEventListener("click", () => {
       navWidget.classList.toggle("expanded");
-        if (navWidget.classList.contains('expanded')) {
-            adjustWidgetPosition();
-        }
+
     });
 
-    // Function to adjust widget position to stay within screen boundaries
-    function adjustWidgetPosition() {
-        const widgetRect = navWidget.getBoundingClientRect();
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
 
-        let newLeft = widgetRect.left;
-        let newTop = widgetRect.top;
 
-        // Adjust left/right if out of bounds
-        if (widgetRect.right > viewportWidth) {
-            newLeft = viewportWidth - widgetRect.width;
-        }
-        if (widgetRect.left < 0) {
-            newLeft = 0;
-        }
 
-        // Adjust top/bottom if out of bounds
-        if (widgetRect.bottom > viewportHeight) {
-            newTop = viewportHeight - widgetRect.height;
-        }
-        if (widgetRect.top < 0) {
-            newTop = 0;
-        }
-
-        navWidget.style.left = `${newLeft}px`;
-        navWidget.style.top = `${newTop}px`;
-    }
-
-    // Adjust position on window resize
-    window.addEventListener('resize', () => {
-        if (navWidget.classList.contains('expanded')) {
-            adjustWidgetPosition();
-        }
-    });
 
 
 
