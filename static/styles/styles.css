@@ -42,17 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 15px;
 }
 
-.title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: var(--bright-red); /* Subtle underline */
-  border-radius: 2px;
-}
+
 
 /* Footer Styles */
 footer {

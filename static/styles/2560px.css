@@ -56,10 +56,6 @@
   margin-bottom: 20px;
 }
 
-#hero .title::after {
-  background-color: var(--bright-red);
-}
-
 .subtitle-container {
   display: flex;
   flex-wrap: wrap;
@@ -110,9 +106,6 @@
   margin-bottom: 10px;
 }
 
-#hero .title::after {
-  background-color: var(--bright-red);
-}
 
 .subtitle-container {
   display: flex;
@@ -187,17 +180,6 @@ h3 {
   padding-bottom: 15px;
 }
 
-.title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: var(--bright-red); /* Subtle underline */
-  border-radius: 2px;
-}
 
 
 #intro {

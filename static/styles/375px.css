@@ -21,9 +21,6 @@
   margin-bottom: 10px;
 }
 
-#hero .title::after {
-  background-color: var(--bright-red);
-}
 
 .subtitle-container {
   display: flex;
