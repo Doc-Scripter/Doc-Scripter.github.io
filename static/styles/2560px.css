@@ -499,15 +499,7 @@ footer .social-links a {
   position: fixed;
   right: 30px; /* Always pinned to the right */
   top: 50%;
-  transform: translateY(-50%);
-  left: auto; /* Ensure left is not fixed */
-  background-color: var(--dark-gray); /* Darker, professional background */
-  border-radius: 50px; /* Pill shape */
   padding: 15px; /* Increased padding */
-  z-index: 1000;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
 }
 
 .drag-hint {

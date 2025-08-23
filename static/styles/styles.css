@@ -186,14 +186,17 @@ footer {
 
 .nav-widget {
   position: fixed;
-  right: 20px;
+  right: 30px; /* Always pinned to the right */
   top: 50%;
   transform: translateY(-50%);
-  display: flex; /* Ensure it's displayed by default */
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  left: auto; /* Ensure left is not fixed */
+  background-color: var(--dark-gray); /* Darker, professional background */
+  border-radius: 50px; /* Pill shape */
+  padding: 15px; /* Increased padding */
   z-index: 1000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
 }
 
 .nav-widget.expanded {
@@ -245,7 +248,7 @@ footer {
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
-.nav-widget.active .nav-links {
+.nav-widget.expanded .nav-links {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -259,7 +262,7 @@ footer {
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.2s ease;
-  color: var(--white); /* White text on dark background */
+  color: var(--dark-gray); /* Dark text on light background */
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 5px; /* Slightly rounded corners */

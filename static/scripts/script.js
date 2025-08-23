@@ -8,8 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollToTopBtn.innerHTML = '&uarr;'; // Up arrow
     document.body.appendChild(scrollToTopBtn);
 
-    navWidget.addEventListener("click", () => {
+    const navDot = document.querySelector(".nav-dot");
+    navDot.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent click from bubbling to document
       navWidget.classList.toggle("expanded");
+    });
+
+    // Close nav widget when clicking outside
+    document.addEventListener("click", (event) => {
+      if (!navWidget.contains(event.target) && navWidget.classList.contains("expanded")) {
+        navWidget.classList.remove("expanded");
+      }
     });
 
 
