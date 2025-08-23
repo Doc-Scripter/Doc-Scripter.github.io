@@ -196,6 +196,13 @@ footer {
   z-index: 1000;
 }
 
+.nav-widget.expanded {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: auto;
+}
+
 .nav-dot {
   width: 12px;
   height: 12px;
