@@ -1,313 +1,798 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <base href="." />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="static/styles/styles.css" />
-  <link rel="stylesheet" href="static/styles/768px.css" />
-  <link rel="stylesheet" href="static/styles/425px.css" />
-  <link rel="stylesheet" href="static/styles/320px.css" />
-  <link rel="stylesheet" href="static/styles/375px.css" />
-  <link rel="stylesheet" href="static/styles/1024px.css" />
-  <link rel="stylesheet" href="static/styles/1280px.css" />
-  <link rel="stylesheet" href="static/styles/1440px.css" />
-  <link rel="stylesheet" href="static/styles/2560px.css" />
-  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clifford Otieno (Doc-Scripter) | IT Consultancy, Business Intelligence, Applied AI Systems &amp; Business Automation | Kisumu, Kenya</title>
+  <meta name="description" content="Clifford Otieno offers IT consultancy, business intelligence, applied AI systems and business automation for Kenyan businesses, plus websites, WordPress & WooCommerce shops, booking and SEO. Based in Kisumu. Free quote on WhatsApp. Also open to full-time engineering roles." />
+  <link rel="canonical" href="https://doc-scripter.github.io/" />
+  <meta name="theme-color" content="#14152a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Doc-Scripter · Clifford Otieno" />
+  <meta property="og:title" content="Clifford Otieno | IT Consultancy, BI, Applied AI & Business Automation" />
+  <meta property="og:description" content="IT consultancy, business intelligence, applied AI systems and business automation, plus websites, WordPress & WooCommerce and SEO for Kenyan SMEs. Based in Kisumu. Request a free quote. Also open to full-time roles." />
+  <meta property="og:url" content="https://doc-scripter.github.io/" />
+  <meta property="og:image" content="https://doc-scripter.github.io/static/images/og-cover.jpg?v=2" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clifford Otieno | IT Consultancy, BI, Applied AI & Business Automation" />
+  <meta name="twitter:description" content="IT consultancy, business intelligence, applied AI systems and business automation for Kenyan SMEs. Websites, WordPress & WooCommerce. Based in Kisumu. Also open to full-time roles." />
+  <meta name="twitter:image" content="https://doc-scripter.github.io/static/images/og-cover.jpg?v=2" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+  <link rel="preload" href="static/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="static/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="static/images/profile.webp" as="image" fetchpriority="high" />
+  <link rel="preconnect" href="https://dev.to" crossorigin />
+  <link rel="preconnect" href="https://dev-to-uploads.s3.amazonaws.com" crossorigin />
+  <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+  <link rel="stylesheet" href="static/styles/main.css?v=9" />
+  <script>
+    document.documentElement.classList.add('js');
+    window.addEventListener('error', function (e) {
+      if (document.documentElement.dataset.booted) return;
+      var t = e.target;
+      if (!t || t === window || (t.tagName && t.tagName === 'SCRIPT')) document.documentElement.classList.remove('js');
+    }, true);
+  </script>
+  <noscript>
+    <style>
+      .topbar, .tabbar, .menu-sheet, .sidebar { display: none !important; }
+      .panel { border-bottom: 1px solid rgba(240,240,240,.1); }
+    </style>
+  </noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://doc-scripter.github.io/#clifford",
+        "name": "Clifford Otieno",
+        "alternateName": "Doc-Scripter",
+        "jobTitle": "IT Consultant, Business Intelligence, Applied AI Systems & Business Automation",
+        "description": "IT consultant in Kisumu, Kenya: business intelligence, applied AI systems, business automation, websites, WordPress & WooCommerce, booking systems and SEO for Kenyan SMEs. Open to full-time roles in backend engineering, business intelligence and applied AI.",
+        "image": "https://doc-scripter.github.io/static/images/profile.webp",
+        "email": "mailto:Clifford242526@gmail.com",
+        "telephone": "+254741194375",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kisumu", "addressCountry": "KE" },
+        "url": "https://doc-scripter.github.io/",
+        "sameAs": [
+          "https://github.com/Doc-Scripter",
+          "https://twitter.com/Clifford_001",
+          "https://www.linkedin.com/in/clifford-otieno-2a2986103",
+          "https://dev.to/clifford_otieno"
+        ],
+        "knowsAbout": ["IT Consultancy", "Business Intelligence", "Applied AI Systems", "Business Automation", "Web Development", "WordPress", "WooCommerce", "Go", "Rust", "Python", "JavaScript", "React", "Node.js", "Docker", "Kubernetes", "AWS", "PostgreSQL", "MongoDB", "Redis", "SEO", "Branding", "M-Pesa Integrations"]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://doc-scripter.github.io/#service",
+        "name": "Clifford Otieno · IT Consultancy, Business Intelligence & Automation",
+        "founder": { "@id": "https://doc-scripter.github.io/#clifford" },
+        "url": "https://doc-scripter.github.io/",
+        "image": "https://doc-scripter.github.io/static/images/og-cover.jpg",
+        "email": "mailto:Clifford242526@gmail.com",
+        "telephone": "+254741194375",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kisumu", "addressCountry": "KE" },
+        "areaServed": { "@type": "Country", "name": "Kenya" },
+        "priceRange": "Quote-based",
+        "contactPoint": { "@type": "ContactPoint", "telephone": "+254741194375", "contactType": "sales", "availableLanguage": ["English", "Swahili"] },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT Consultancy, Web & Digital Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Websites" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Online Booking Systems" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Online Shops (Ecommerce)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "School & Learning Platforms" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & Google Visibility" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding & Identity" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Care & Growth" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Business Systems" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WordPress & WooCommerce Websites" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Intelligence & Dashboards" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Applied AI Systems" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automation" } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://doc-scripter.github.io/#website",
+        "url": "https://doc-scripter.github.io/",
+        "name": "Doc-Scripter · Clifford Otieno",
+        "publisher": { "@id": "https://doc-scripter.github.io/#clifford" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://doc-scripter.github.io/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": { "@type": "Answer", "text": "Every project is different, so I quote after a short chat about what you need. You'll get a clear price and timeline before any work starts, no surprises." } },
+          { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "Most business websites take 1–3 weeks from first chat to going live. Bigger systems like booking or shops take a little longer, and I'll give you an exact timeline in your quote." } },
+          { "@type": "Question", "name": "Do I need to understand tech?", "acceptedAnswer": { "@type": "Answer", "text": "Not at all. I handle everything technical and explain each step in plain language. You focus on your business; I'll focus on the technology." } },
+          { "@type": "Question", "name": "Do you build WordPress and WooCommerce websites?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. WordPress is a great choice when you want to update content yourself, and WooCommerce turns it into a full online shop. I design it, build it, and show you how to use it." } },
+          { "@type": "Question", "name": "Will my business show up on Google?", "acceptedAnswer": { "@type": "Answer", "text": "I build every site with SEO from day one: fast pages, clear structure and the right keywords. And I offer ongoing SEO so customers in Kisumu and across Kenya find you on Google Search and Maps." } },
+          { "@type": "Question", "name": "Can you connect M-Pesa payments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. I've integrated M-Pesa into booking systems and online shops, so your customers can pay the way they already trust." } },
+          { "@type": "Question", "name": "What is business intelligence, in plain language?", "acceptedAnswer": { "@type": "Answer", "text": "It means turning the records you already have (sales, stock, customers) into simple dashboards and reports, so you can see what's selling, what's slow, and where the money goes." } },
+          { "@type": "Question", "name": "Can AI really help a small business?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, practical AI, not hype. Think a helper that answers customer questions, search that finds products by photo, or tools that read and summarise documents. I build it into the systems you already use." } },
+          { "@type": "Question", "name": "Do you work with businesses outside Kisumu?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. I'm based in Kisumu and work with clients across Kenya. Most projects run smoothly over WhatsApp, calls and shared previews." } },
+          { "@type": "Question", "name": "What happens after the website goes live?", "acceptedAnswer": { "@type": "Answer", "text": "I don't disappear. Care & Growth covers updates, speed, security and support, and I can automate reminders, reports and follow-ups so the site keeps working for you." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="nav-widget">
-    <div class="nav-dot"></div>
-    <div class="drag-hint">Hold to drag</div>
-    <div class="nav-links">
-      <a href="#hero">Introduction</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#articles">Articles</a>
-      <a href="#journey">Journey</a>
-      <a href="#footer">Let's Connect</a>
+  <a class="skip-link" href="#home">Skip to content</a>
+  <p class="sr-only" id="route-status" role="status"></p>
+
+  <div class="shell">
+    <!-- Desktop sidebar / tablet rail -->
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Doc-Scripter home">
+        <img class="brand-mark" src="static/images/profile.webp" alt="" width="38" height="38" decoding="async" />
+        <span class="brand-word" translate="no">DOC-<em>SCRIPTER</em></span>
+      </a>
+
+      <nav class="side-nav" aria-label="Primary">
+        <a href="#home" class="nav-link" data-panel="home" title="Home"><span class="nav-num">01</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5 9.5V21h5v-6h4v6h5V9.5"/></svg><span class="nav-label">Home</span></a>
+        <a href="#work" class="nav-link" data-panel="work" title="Previous Work"><span class="nav-num">02</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 12h18"/></svg><span class="nav-label">Previous Work</span></a>
+        <a href="#services" class="nav-link" data-panel="services" title="Services"><span class="nav-num">03</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg><span class="nav-label">Services</span></a>
+        <a href="#experience" class="nav-link" data-panel="experience" title="Experience"><span class="nav-num">04</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span class="nav-label">Experience</span></a>
+        <a href="#blog" class="nav-link" data-panel="blog" title="Blog"><span class="nav-num">05</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><span class="nav-label">Blog</span></a>
+        <a href="#about" class="nav-link" data-panel="about" title="About"><span class="nav-num">06</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg><span class="nav-label">About</span></a>
+        <a href="#contact" class="nav-link" data-panel="contact" title="Contact"><span class="nav-num">07</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="nav-label">Contact</span></a>
+      </nav>
+
+      <div class="side-foot">
+        <p class="status-line"><span class="status-dot" aria-hidden="true"></span>Kisumu, Kenya · Open to full-time roles</p>
+        <a class="btn btn--primary btn--block" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27d%20like%20a%20quote%20for%20a%20website." target="_blank" rel="noopener" aria-label="Get a Quote on WhatsApp">
+          <svg class="i-wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          <span class="btn-text">Get a Quote</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Mobile top bar -->
+    <header class="topbar">
+      <a class="brand brand--mini" href="#home" aria-label="Doc-Scripter home">
+        <img class="brand-mark" src="static/images/profile.webp" alt="" width="38" height="38" decoding="async" />
+      </a>
+      <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27d%20like%20a%20quote%20for%20a%20website." target="_blank" rel="noopener"><svg class="i-wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="btn-text">Get a Quote</span></a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <div class="menu-sheet" id="menu-sheet" hidden>
+      <nav aria-label="Menu">
+        <a href="#home" class="sheet-link" data-panel="home">Home</a>
+        <a href="#work" class="sheet-link" data-panel="work">Previous Work</a>
+        <a href="#services" class="sheet-link" data-panel="services">Services</a>
+        <a href="#experience" class="sheet-link" data-panel="experience">Experience</a>
+        <a href="#blog" class="sheet-link" data-panel="blog">Blog</a>
+        <a href="#about" class="sheet-link" data-panel="about">About</a>
+        <a href="#contact" class="sheet-link" data-panel="contact">Contact</a>
+      </nav>
     </div>
-    <div class="nav-arrows">
-      <div class="nav-arrow prev"></div>
-      <div class="nav-arrow next"></div>
-    </div>
+
+    <!-- Stage -->
+    <main class="stage" id="stage">
+
+      <!-- ============ HOME ============ -->
+      <section class="panel" id="home" aria-labelledby="home-title" tabindex="-1">
+        <div class="panel-inner">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow reveal" style="--i:0">Clifford Otieno · IT Consultancy · Kisumu, Kenya</p>
+              <h1 class="hero-title reveal" style="--i:1" id="home-title" tabindex="-1">Technology that grows your business.</h1>
+              <p class="lead reveal" style="--i:2">I help Kenyan businesses get found online, sell more, save time, with professional websites, WordPress &amp; WooCommerce shops, clear dashboards, practical AI, and automations that handle the busywork. I’m also open to full-time roles, so send a job description if you’re hiring.</p>
+              <div class="cta-row reveal" style="--i:3">
+                <a class="btn btn--primary" href="#work">See My Work</a>
+                <a class="btn btn--ghost" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27d%20like%20a%20quote%20for%20a%20website." target="_blank" rel="noopener">Request a Quote</a>
+              </div>
+              <div class="socials reveal" style="--i:4">
+                <p class="socials-label">Let’s connect</p>
+                <svg class="socials-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+                <div class="socials-row">
+                  <a href="https://github.com/Doc-Scripter" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                  <a href="https://twitter.com/Clifford_001" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg></a>
+                  <a href="https://www.linkedin.com/in/clifford-otieno-2a2986103" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                  <a href="https://dev.to/clifford_otieno" target="_blank" rel="noopener" aria-label="DEV.to" class="dev-glyph">DEV</a>
+                </div>
+              </div>
+            </div>
+            <div class="hero-photo reveal" style="--i:2">
+              <div class="photo-ring">
+                <img src="static/images/profile.webp" alt="Clifford Otieno, IT consultant in Kisumu, Kenya" width="640" height="640" fetchpriority="high" />
+              </div>
+            </div>
+          </div>
+
+          <div class="pillars reveal" style="--i:5" aria-label="What I specialise in">
+            <a class="pillar" href="#services">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 3.6 10.8c-.6.5-.6 1.2-.6 2.2h-6c0-1-.05-1.7-.65-2.2A6 6 0 0 1 12 3Z"/></svg>
+              <h2>IT Consultancy</h2>
+              <p>Not sure what tech you need? I look at your business and give you a clear, honest plan.</p>
+            </a>
+            <a class="pillar" href="#services">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M7 16v-5M12 16V7M17 16V4"/></svg>
+              <h2>Business Intelligence</h2>
+              <p>Turn your sales and records into simple dashboards so you see what’s working.</p>
+            </a>
+            <a class="pillar" href="#services">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+              <h2>Applied AI Systems</h2>
+              <p>Practical AI: smart search, assistants and document handling that saves real hours.</p>
+            </a>
+            <a class="pillar" href="#services">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              <h2>Business Automation</h2>
+              <p>Invoices, reminders, reports and follow-ups, handled automatically rather than by hand.</p>
+            </a>
+          </div>
+
+          <div class="stats reveal" style="--i:6" aria-label="Track record">
+            <div class="stat"><span class="stat-num" data-count="6" data-suffix="+">0+</span><span class="stat-label">Client projects shipped</span></div>
+            <div class="stat"><span class="stat-num" data-count="7" data-suffix="">0</span><span class="stat-label">Business types served</span></div>
+            <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">0%</span><span class="stat-label">Built end-to-end</span></div>
+            <div class="stat"><span class="stat-num" data-count="24" data-suffix="h">0h</span><span class="stat-label">WhatsApp reply time</span></div>
+          </div>
+
+          <div class="marquee-block reveal" style="--i:7">
+            <div class="marquee-head">
+              <p class="marquee-title">Tools I build with</p>
+              <button class="marquee-toggle" id="marquee-toggle" type="button" aria-label="Pause the scrolling tools list">Pause</button>
+            </div>
+            <div class="marquee" aria-label="Technologies I work with">
+              <div class="marquee-track">
+                <span>Go</span><i>◆</i><span>React</span><i>◆</i><span>Node.js</span><i>◆</i><span>Python</span><i>◆</i><span>WordPress</span><i>◆</i><span>WooCommerce</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>AWS</span><i>◆</i><span>M-Pesa payments</span><i>◆</i><span>Tailwind CSS</span><i>◆</i><span>Redis</span><i>◆</i><span>Kubernetes</span><i>◆</i><span>Svelte</span><i>◆</i>
+                <span aria-hidden="true">Go</span><i aria-hidden="true">◆</i><span aria-hidden="true">React</span><i aria-hidden="true">◆</i><span aria-hidden="true">Node.js</span><i aria-hidden="true">◆</i><span aria-hidden="true">Python</span><i aria-hidden="true">◆</i><span aria-hidden="true">WordPress</span><i aria-hidden="true">◆</i><span aria-hidden="true">WooCommerce</span><i aria-hidden="true">◆</i><span aria-hidden="true">PostgreSQL</span><i aria-hidden="true">◆</i><span aria-hidden="true">Docker</span><i aria-hidden="true">◆</i><span aria-hidden="true">AWS</span><i aria-hidden="true">◆</i><span aria-hidden="true">M-Pesa payments</span><i aria-hidden="true">◆</i><span aria-hidden="true">Tailwind CSS</span><i aria-hidden="true">◆</i><span aria-hidden="true">Redis</span><i aria-hidden="true">◆</i><span aria-hidden="true">Kubernetes</span><i aria-hidden="true">◆</i><span aria-hidden="true">Svelte</span><i aria-hidden="true">◆</i>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-band reveal" style="--i:8">
+            <div>
+              <p><span class="eyebrow">Open to work</span><br /><strong>Hiring an IT, BI or AI engineer?</strong></p>
+              <p>I’m open to full-time roles in backend engineering, business intelligence and applied AI. Go, Python, JavaScript, PostgreSQL, Docker and AWS are my everyday tools. I’m based in Kisumu, Kenya and open to remote work. Send the role and I’ll reply with my CV.</p>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn--primary" href="mailto:Clifford242526@gmail.com?subject=Role%20opportunity">Email me</a>
+              <a class="btn btn--ghost" href="static/assets/Clifford-Otieno-Resume.pdf" download="Clifford-Otieno-Resume.pdf">Download Resume</a>
+              <a class="text-link" href="https://www.linkedin.com/in/clifford-otieno-2a2986103" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="cta-band reveal" style="--i:9">
+            <p><strong>Got a collaboration in mind?</strong> Workshops, community sessions, joint builds or speaking, I’m interested. Send the details and we can shape it together.</p>
+            <div class="cta-row">
+              <a class="btn btn--ghost" href="mailto:Clifford242526@gmail.com?subject=Collaboration%20request">Collaboration request</a>
+              <a class="text-link" href="#contact">Other ways to reach me</a>
+            </div>
+          </div>
+
+          <div class="cta-band reveal" style="--i:10">
+            <p><strong>Not sure where to start?</strong> That’s normal. Tell me about your business and I’ll tell you what you need.</p>
+            <a class="btn btn--ghost" href="#contact">Let’s Talk</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WORK ============ -->
+      <section class="panel" id="work" aria-labelledby="work-title">
+        <div class="panel-inner">
+          <p class="eyebrow reveal" style="--i:0">Previous work · Live websites</p>
+          <h1 class="panel-title reveal" style="--i:1" id="work-title" tabindex="-1">Work that’s live and working.</h1>
+          <p class="lead reveal" style="--i:2">Real websites for real businesses. Every project below is live.</p>
+
+          <div class="work-grid">
+            <article class="work-card reveal" style="--i:3">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="browser-domain">dianihostel.com</span></div>
+                <img src="static/images/work/diani-hostel-960w.webp" srcset="static/images/work/diani-hostel-320w.webp 320w, static/images/work/diani-hostel-sm.webp 640w, static/images/work/diani-hostel-960w.webp 960w, static/images/work/diani-hostel.webp 1280w" sizes="(min-width:1340px) 482px, (min-width:1024px) 34vw, (min-width:768px) 40vw, 90vw" alt="Homepage of the Diani Hostel booking website" width="1280" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-body">
+                <div class="work-tags"><span class="tag tag--gold">Hospitality</span><span class="tag">Booking platform</span></div>
+                <h2>Diani Hostel</h2>
+                <p>Guests browse rooms, book and pay online, no phone calls needed.</p>
+                <a class="btn btn--ghost btn--sm" href="https://www.dianihostel.com" target="_blank" rel="noopener">Visit Live Site <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal" style="--i:4">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="browser-domain">twynon.co.ke</span></div>
+                <img src="static/images/work/twynon-960w.webp" srcset="static/images/work/twynon-320w.webp 320w, static/images/work/twynon-sm.webp 640w, static/images/work/twynon-960w.webp 960w, static/images/work/twynon.webp 1280w" sizes="(min-width:1340px) 482px, (min-width:1024px) 34vw, (min-width:768px) 40vw, 90vw" alt="Homepage of the Twynon online shop" width="1280" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-body">
+                <div class="work-tags"><span class="tag tag--gold">Ecommerce</span><span class="tag">Photo search</span></div>
+                <h2>Twynon</h2>
+                <p>An online shop where customers can even search for products by photo.</p>
+                <a class="btn btn--ghost btn--sm" href="https://www.twynon.co.ke" target="_blank" rel="noopener">Visit Live Site <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal" style="--i:5">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="browser-domain">ujuzi360.vercel.app</span></div>
+                <img src="static/images/work/ujuzi360-960w.webp" srcset="static/images/work/ujuzi360-320w.webp 320w, static/images/work/ujuzi360-sm.webp 640w, static/images/work/ujuzi360-960w.webp 960w, static/images/work/ujuzi360.webp 1280w" sizes="(min-width:1340px) 482px, (min-width:1024px) 34vw, (min-width:768px) 40vw, 90vw" alt="Homepage of the Ujuzi360 learning platform" width="1280" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-body">
+                <div class="work-tags"><span class="tag tag--gold">Education</span><span class="tag">Learning platform</span></div>
+                <h2>Ujuzi360</h2>
+                <p>A learning platform with expert-led courses, live sessions and certificates, all in one simple place.</p>
+                <a class="btn btn--ghost btn--sm" href="https://ujuzi360.vercel.app" target="_blank" rel="noopener">Visit Live Site <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal" style="--i:6">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="browser-domain">bursary-application-xi.vercel.app</span></div>
+                <img src="static/images/work/bursary-960w.webp" srcset="static/images/work/bursary-320w.webp 320w, static/images/work/bursary-sm.webp 640w, static/images/work/bursary-960w.webp 960w, static/images/work/bursary.webp 1280w" sizes="(min-width:1340px) 482px, (min-width:1024px) 34vw, (min-width:768px) 40vw, 90vw" alt="Homepage of the county bursary application platform" width="1280" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-body">
+                <div class="work-tags"><span class="tag tag--gold">Government</span><span class="tag">Public service</span></div>
+                <h2>County Bursary Platform</h2>
+                <p>Students apply for bursary funding online instead of queuing at county offices.</p>
+                <a class="btn btn--ghost btn--sm" href="https://bursary-application-xi.vercel.app" target="_blank" rel="noopener">Visit Live Site <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal" style="--i:7">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="browser-domain">eunidripirrigationsystems.com</span></div>
+                <img src="static/images/work/euni-drip-960w.webp" srcset="static/images/work/euni-drip-320w.webp 320w, static/images/work/euni-drip-sm.webp 640w, static/images/work/euni-drip-960w.webp 960w, static/images/work/euni-drip.webp 1280w" sizes="(min-width:1340px) 482px, (min-width:1024px) 34vw, (min-width:768px) 40vw, 90vw" alt="Homepage of the Euni Drip Irrigation Systems website" width="1280" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-body">
+                <div class="work-tags"><span class="tag tag--gold">Agriculture</span><span class="tag">Ecommerce</span><span class="tag">WordPress</span><span class="tag">SEO</span></div>
+                <h2>Euni Drip Irrigation Systems</h2>
+                <p>An online shop where farmers purchase irrigation equipment and services, built on WordPress and tuned for SEO so farmers find it on Google.</p>
+                <a class="btn btn--ghost btn--sm" href="https://eunidripirrigationsystems.com" target="_blank" rel="noopener">Visit Live Site <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal" style="--i:8">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="browser-domain">muhuga.com</span></div>
+                <img src="static/images/work/muhuga-960w.webp" srcset="static/images/work/muhuga-320w.webp 320w, static/images/work/muhuga-sm.webp 640w, static/images/work/muhuga-960w.webp 960w, static/images/work/muhuga.webp 1280w" sizes="(min-width:1340px) 482px, (min-width:1024px) 34vw, (min-width:768px) 40vw, 90vw" alt="Homepage of the Muhuga logistics and farm produce platform" width="1280" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-body">
+                <div class="work-tags"><span class="tag tag--gold">Logistics</span><span class="tag">Ecommerce</span><span class="tag">Design</span><span class="tag">SEO</span></div>
+                <h2>Muhuga</h2>
+                <p>Farm produce moves from farmer to buyer with cold-chain delivery. Designed, built and made visible on Google.</p>
+                <a class="btn btn--ghost btn--sm" href="https://muhuga.com" target="_blank" rel="noopener">Visit Live Site <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="cta-band reveal" style="--i:9">
+            <p><strong>Want results like these for your business?</strong> Let’s talk about what you need.</p>
+            <a class="btn btn--primary" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%20saw%20your%20work%20and%20I%27d%20like%20a%20quote%20for%20my%20business." target="_blank" rel="noopener">Get a Quote</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="panel" id="services" aria-labelledby="services-title">
+        <div class="panel-inner">
+          <p class="eyebrow reveal" style="--i:0">Services · Quote-based, no surprises</p>
+          <h1 class="panel-title reveal" style="--i:1" id="services-title" tabindex="-1">What I can do for your business.</h1>
+          <p class="lead reveal" style="--i:2">Every business is different, so every quote is different. Tell me your goal and I’ll handle the tech.</p>
+
+          <div class="services-grid">
+            <article class="service-card reveal" style="--i:3">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9h6M7 12h10"/></svg>
+              <h2>Business Websites</h2>
+              <p>A professional home for your business that loads fast, works on every phone, and turns visitors into customers.</p>
+              <p class="good-for"><strong>Good for:</strong> hotels, lodges, clinics, schools, car yards.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20a%20business%20website.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:4">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 15h3"/></svg>
+              <h2>Online Booking Systems</h2>
+              <p>Let guests and clients book rooms, tables or appointments, and pay online, including M-Pesa.</p>
+              <p class="good-for"><strong>Good for:</strong> hostels, hotels, tour operators, salons, clinics.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20an%20online%20booking%20system.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:5">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+              <h2>Online Shops</h2>
+              <p>Sell your products with photos, easy search and secure checkout, open 24 hours a day.</p>
+              <p class="good-for"><strong>Good for:</strong> retailers, car yards, hardware, fashion.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20an%20online%20shop.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:6">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 10 5-10 5L2 9Z"/><path d="M6 11.5V17c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5M22 9v5"/></svg>
+              <h2>School &amp; Learning Platforms</h2>
+              <p>Manage students, lessons, applications and progress online, all in one simple system.</p>
+              <p class="good-for"><strong>Good for:</strong> schools, colleges, training institutes.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20a%20school%20or%20learning%20platform.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:7">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M8 10.5h5M10.5 8v5"/></svg>
+              <h2>SEO &amp; Google Visibility</h2>
+              <p>Show up on Google Search and Maps when customers search for what you sell.</p>
+              <p class="good-for"><strong>Good for:</strong> any business that wants local customers.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20SEO%20and%20Google%20visibility.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:8">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 8.7l5.4-.8Z"/></svg>
+              <h2>Branding &amp; Identity</h2>
+              <p>A logo, colors and a look clients remember, applied across your site, business cards and socials.</p>
+              <p class="good-for"><strong>Good for:</strong> new businesses, rebrands, growing SMEs.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20branding%20and%20identity.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:9">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3M17 3h4v4"/></svg>
+              <h2>Care &amp; Growth</h2>
+              <p>Updates, speed fixes, security and support after launch. I don’t disappear.</p>
+              <p class="good-for"><strong>Good for:</strong> every site I build, and sites built by others.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20website%20care%20and%20support.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:10">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5.6 5.6L3 18v3h3l5.9-5.9a4 4 0 0 0 5.6-5.6l-2.8 2.8-2.1-2.1Z"/></svg>
+              <h2>Custom Systems</h2>
+              <p>Does your process involve applications, records or inventory? I’ll build a system that fits how you work.</p>
+              <p class="good-for"><strong>Good for:</strong> SACCOs, counties, NGOs, distributors.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%20need%20a%20custom%20system%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:11">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z"/></svg>
+              <h2>WordPress &amp; WooCommerce</h2>
+              <p>A website or online shop on WordPress that you can update yourself, with WooCommerce for selling and a checkout that works with M-Pesa.</p>
+              <p class="good-for"><strong>Good for:</strong> businesses that want to manage their own content and products.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20a%20WordPress%20%2F%20WooCommerce%20website.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:12">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M7 16v-5M12 16V7M17 16V4"/></svg>
+              <h2>Business Intelligence</h2>
+              <p>Turn your sales, stock and customer records into clear dashboards and reports, so decisions come from numbers, not guesswork.</p>
+              <p class="good-for"><strong>Good for:</strong> shops, distributors, SACCOs, NGOs, and anyone sitting on data they don’t use.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20business%20intelligence%20and%20dashboards.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:13">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+              <h2>Applied AI Systems</h2>
+              <p>Practical AI that does real work: answer customer questions, search products by photo, read documents and summarise records, built into your systems.</p>
+              <p class="good-for"><strong>Good for:</strong> businesses drowning in questions, paperwork or product searches.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20applied%20AI%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal" style="--i:14">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              <h2>Business Automation</h2>
+              <p>Stop doing the same tasks by hand. I connect your tools so invoices, reminders, reports and follow-ups happen automatically.</p>
+              <p class="good-for"><strong>Good for:</strong> any team losing hours to copy-paste and manual follow-ups.</p>
+              <div class="service-cta">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27m%20interested%20in%20automating%20tasks%20in%20my%20business.%20Can%20we%20talk%3F" target="_blank" rel="noopener">Request a Quote →</a>
+                <a class="text-link" href="#contact">or use the enquiry form</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="steps-block reveal" style="--i:15">
+            <h2 class="steps-title">How it works</h2>
+            <ol class="steps">
+              <li><span class="step-num">1</span><div><strong>Chat on WhatsApp</strong><p>Free, no obligation. Tell me about your business and what you want to achieve.</p></div></li>
+              <li><span class="step-num">2</span><div><strong>Get a clear quote &amp; timeline</strong><p>You’ll know the price and the schedule before any work starts. No surprises.</p></div></li>
+              <li><span class="step-num">3</span><div><strong>I build, you approve, we launch</strong><p>You see progress as I go. When you’re happy, your business goes live.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section class="panel" id="experience" aria-labelledby="experience-title">
+        <div class="panel-inner">
+          <p class="eyebrow reveal" style="--i:0">Experience · Professional journey</p>
+          <h1 class="panel-title reveal" style="--i:1" id="experience-title" tabindex="-1">Where I’ve done the work.</h1>
+          <p class="lead reveal" style="--i:2">My professional experience: building for clients, teaching the community, and writing about what I learn.</p>
+
+          <ol class="xp-timeline reveal" style="--i:3">
+            <li class="xp-item">
+              <div class="xp-head"><h2 class="xp-role">IT Consultant &amp; Web Developer</h2><span class="xp-period">Ongoing</span></div>
+              <p class="xp-org">Doc-Scripter · Independent practice · Kisumu, Kenya</p>
+              <p class="xp-desc">I run my own consultancy: websites, booking systems, online shops, WordPress &amp; WooCommerce, SEO and custom business systems, taken from first chat to launch and kept running afterwards.</p>
+              <ul class="chips xp-engagements" aria-label="Client engagements">
+                <li>Diani Hostel</li><li>Twynon</li><li>Ujuzi360</li><li>County Bursary Platform</li><li>Euni Drip Irrigation Systems</li><li>Muhuga</li>
+              </ul>
+              <a class="text-link" href="#work">See the live client work →</a>
+            </li>
+            <li class="xp-item">
+              <div class="xp-head"><h2 class="xp-role">Community Speaker &amp; Mentor</h2><span class="xp-period">Community</span></div>
+              <p class="xp-org">Kisumu Gophers · Zone01 Kisumu</p>
+              <p class="xp-desc">I present and mentor at Kisumu’s developer meetups, sharing Go and web development with the next generation of builders.</p>
+              <a class="text-link" href="#about">Photos from the meetups →</a>
+            </li>
+            <li class="xp-item">
+              <div class="xp-head"><h2 class="xp-role">Facilitator · Build with AI</h2><span class="xp-period">Community</span></div>
+              <p class="xp-org">Google Developer Groups (GDG)</p>
+              <p class="xp-desc">I teach hands-on sessions at GDG Build with AI, helping developers put practical AI to work in real projects.</p>
+            </li>
+            <li class="xp-item">
+              <div class="xp-head"><h2 class="xp-role">Technical Writer</h2><span class="xp-period">Ongoing</span></div>
+              <p class="xp-org">DEV.to · clifford_otieno</p>
+              <p class="xp-desc">I write about software, AI and data in plain-language articles that help developers and business owners understand tech.</p>
+              <a class="text-link" href="#blog">Read the latest articles →</a>
+            </li>
+          </ol>
+
+          <div class="cta-band reveal" style="--i:4">
+            <p><strong>Want this experience on your project?</strong> Get a clear quote, or download my resume for the full picture.</p>
+            <a class="btn btn--primary" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27d%20like%20a%20quote%20for%20my%20business." target="_blank" rel="noopener">Get a Quote</a>
+            <a class="btn btn--ghost" href="static/assets/Clifford-Otieno-Resume.pdf" download="Clifford-Otieno-Resume.pdf">Download Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BLOG ============ -->
+      <section class="panel" id="blog" aria-labelledby="blog-title">
+        <div class="panel-inner">
+          <p class="eyebrow reveal" style="--i:0">Writing · Auto-updated from DEV.to</p>
+          <h1 class="panel-title reveal" style="--i:1" id="blog-title" tabindex="-1">Notes from the workbench.</h1>
+          <p class="lead reveal" style="--i:2">I write about building software, systems, workflows and AI.</p>
+
+          <div class="blog-grid" id="blog-grid"></div>
+          <p class="sr-only" id="blog-status" role="status"></p>
+
+
+          <div class="blog-grid" id="blog-skeleton" aria-hidden="true">
+            <div class="blog-card skeleton"><div class="sk-img"></div><div class="sk-line w80"></div><div class="sk-line w60"></div><div class="sk-line w40"></div></div>
+            <div class="blog-card skeleton"><div class="sk-img"></div><div class="sk-line w80"></div><div class="sk-line w60"></div><div class="sk-line w40"></div></div>
+            <div class="blog-card skeleton"><div class="sk-img"></div><div class="sk-line w80"></div><div class="sk-line w60"></div><div class="sk-line w40"></div></div>
+          </div>
+
+          <div class="blog-grid" id="blog-fallback" hidden>
+            <article class="blog-card">
+              <div class="blog-cover blog-cover--empty" aria-hidden="true">DEV.to</div>
+              <div class="blog-body">
+                <p class="blog-meta">DEV.to · Sep 2024</p>
+                <h2>Data Science Isn’t Just for Math Nerds</h2>
+                <p>Clarifying the maths myth and common misconceptions about data science.</p>
+                <a class="text-link" href="https://dev.to/clifford_otieno/data-science-isnt-just-for-math-nerds-49i4" target="_blank" rel="noopener">Read on DEV.to ↗</a>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-cover blog-cover--empty" aria-hidden="true">DEV.to</div>
+              <div class="blog-body">
+                <p class="blog-meta">DEV.to · Jul 2025</p>
+                <h2>Understanding Tech Debt</h2>
+                <p>What tech debt really costs a product, and how teams pay it down.</p>
+                <a class="text-link" href="https://dev.to/clifford_otieno/understanding-tech-debt-5e2f" target="_blank" rel="noopener">Read on DEV.to ↗</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="blog-more reveal" style="--i:4">
+            <a class="btn btn--ghost" href="https://dev.to/clifford_otieno" target="_blank" rel="noopener">View all articles on DEV.to ↗</a>
+            <a class="text-link" href="https://www.linkedin.com/in/clifford-otieno-2a2986103" target="_blank" rel="noopener">More updates on LinkedIn ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="panel" id="about" aria-labelledby="about-title">
+        <div class="panel-inner">
+          <p class="eyebrow reveal" style="--i:0">About · Kisumu, Kenya</p>
+          <h1 class="panel-title reveal" style="--i:1" id="about-title" tabindex="-1">The person behind the code.</h1>
+
+          <div class="about-grid">
+            <div class="about-photo reveal" style="--i:2">
+              <img src="static/images/profile.webp" alt="Clifford Otieno" width="640" height="640" loading="lazy" decoding="async" />
+            </div>
+            <div class="about-story reveal" style="--i:3">
+              <p>I’m <strong>Clifford Otieno</strong>, an IT consultant based in Kisumu, Kenya. My work covers <strong>IT consultancy, business intelligence, applied AI systems and business automation</strong>, plus the websites and online shops that bring customers in. I build for real businesses: places where a guest needs to book a room, a student needs to apply for funding, a shop needs to sell. Alongside client work, I’m open to full-time roles in IT, backend engineering, business intelligence and applied AI.</p>
+              <p>I also teach and speak at community meetups like <strong>Kisumu Gophers</strong> and <strong>GDG Build with AI</strong>, because good tech should spread. When I’m not coding, I’m exploring sci-fi, anime, and the perfect cup of tea.</p>
+              <p><a class="text-link" href="#experience">See my full professional experience →</a></p>
+              <a class="btn btn--ghost" href="static/assets/Clifford-Otieno-Resume.pdf" download="Clifford-Otieno-Resume.pdf">Download Resume (PDF)</a>
+            </div>
+          </div>
+
+          <div class="skills-block reveal" style="--i:4">
+            <h2 class="block-title">Skills &amp; tools</h2>
+            <div class="skill-groups">
+              <div class="skill-group"><h3>Consultancy &amp; data</h3><ul class="chips"><li>IT Consultancy</li><li>Business Intelligence</li><li>Applied AI Systems</li><li>Business Automation</li><li>Data Dashboards</li><li>Database Management</li></ul></div>
+              <div class="skill-group"><h3>CMS &amp; commerce</h3><ul class="chips"><li>WordPress</li><li>WooCommerce</li><li>M-Pesa payments</li><li>SEO</li></ul></div>
+              <div class="skill-group"><h3>Languages</h3><ul class="chips"><li>Go</li><li>Rust</li><li>Python</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>SQL</li></ul></div>
+              <div class="skill-group"><h3>Frameworks</h3><ul class="chips"><li>React</li><li>Node.js</li><li>Express</li><li>Gin</li><li>Gorm</li><li>Tailwind CSS</li><li>Svelte</li></ul></div>
+              <div class="skill-group"><h3>Cloud &amp; tools</h3><ul class="chips"><li>Git &amp; GitHub</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>GCP</li><li>Postman</li><li>VS Code</li><li>Jira</li></ul></div>
+              <div class="skill-group"><h3>Databases</h3><ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li><li>MongoDB</li><li>Redis</li></ul></div>
+              <div class="skill-group"><h3>Practices</h3><ul class="chips"><li>REST APIs</li><li>Microservices</li><li>CI/CD</li><li>Agile / Scrum</li><li>TDD</li><li>OOP</li></ul></div>
+            </div>
+          </div>
+
+          <div class="journey-block reveal" style="--i:5">
+            <h2 class="block-title">Community &amp; journey</h2>
+            <div class="journey-grid">
+              <article class="journey-card">
+                <h3>Presenting at Kisumu Gophers · <a href="https://x.com/Zone01Kisumu" target="_blank" rel="noopener">Zone01 Kisumu</a></h3>
+                <div class="journey-photos">
+                  <a href="static/images/journey/gophers-zone01-1.webp" target="_blank" rel="noopener"><img src="static/images/journey/gophers-zone01-1.webp" alt="Clifford presenting at the Kisumu Gophers meetup, photo 1" width="1280" height="854" loading="lazy" decoding="async" /></a>
+                  <a href="static/images/journey/gophers-zone01-2.webp" target="_blank" rel="noopener"><img src="static/images/journey/gophers-zone01-2.webp" alt="Clifford presenting at the Kisumu Gophers meetup, photo 2" width="1280" height="854" loading="lazy" decoding="async" /></a>
+                </div>
+              </article>
+              <article class="journey-card">
+                <h3>Build with AI · GDG</h3>
+                <div class="journey-photos">
+                  <a href="static/images/journey/build-with-ai-1.webp" target="_blank" rel="noopener"><img src="static/images/journey/build-with-ai-1.webp" alt="Teaching web development concepts at Build with AI, photo 1" width="1280" height="584" loading="lazy" decoding="async" /></a>
+                  <a href="static/images/journey/build-with-ai-2.webp" target="_blank" rel="noopener"><img src="static/images/journey/build-with-ai-2.webp" alt="Teaching web development concepts at Build with AI, photo 2" width="1280" height="854" loading="lazy" decoding="async" /></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="panel" id="contact" aria-labelledby="contact-title">
+        <div class="panel-inner">
+          <p class="eyebrow reveal" style="--i:0">Contact · Free quotes</p>
+          <h1 class="panel-title reveal" style="--i:1" id="contact-title" tabindex="-1">Let’s build yours.</h1>
+          <p class="lead reveal" style="--i:2">Tell me about your business. I reply within a day.</p>
+
+          <div class="contact-grid">
+            <form class="enquiry-card reveal" style="--i:3" id="enquiry-form" novalidate>
+              <h2>Start an enquiry</h2>
+              <div class="field-row">
+                <div class="field"><label for="f-name">Your name *</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error" placeholder="e.g. Jane Achieng…" /><p class="field-error" id="f-name-error" hidden>Please enter your name so I can reply to you.</p></div>
+                <div class="field"><label for="f-business">Business name</label><input id="f-business" name="business" type="text" autocomplete="organization" placeholder="e.g. Lakeside Lodge…" /></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="f-service">What do you need? *</label>
+                  <select id="f-service" name="service" required>
+                    <option value="Not sure yet">Not sure yet, guide me</option>
+                    <option>Business Website</option>
+                    <option>Online Booking System</option>
+                    <option>Online Shop</option>
+                    <option>School / Learning Platform</option>
+                    <option>SEO & Google Visibility</option>
+                    <option>Branding & Identity</option>
+                    <option>Care & Growth (maintenance)</option>
+                    <option>Custom System</option>
+                    <option>WordPress & WooCommerce</option>
+                    <option>Business Intelligence</option>
+                    <option>Applied AI Systems</option>
+                    <option>Business Automation</option>
+                    <option>IT Consultancy</option>
+                  </select>
+                </div>
+                <div class="field"><label for="f-budget">Budget (optional)</label>
+                  <select id="f-budget" name="budget">
+                    <option value="">Prefer to discuss</option>
+                    <option>Under KES 20,000</option>
+                    <option>KES 20,000 – 50,000</option>
+                    <option>KES 50,000 – 100,000</option>
+                    <option>Over KES 100,000</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field"><label for="f-message">Tell me about your business *</label><textarea id="f-message" name="message" rows="4" required aria-describedby="f-message-error" placeholder="e.g. I run a hotel in Kisumu and want guests to book rooms online…"></textarea><p class="field-error" id="f-message-error" hidden>Tell me a little about your business, even one sentence helps me quote accurately.</p></div>
+              <div class="form-actions">
+                <button class="btn btn--primary" type="submit">Open Pre-Filled Email</button>
+                <button class="btn btn--ghost" type="button" id="wa-send">Send via WhatsApp Instead</button>
+              </div>
+              <p class="form-note" id="form-note" role="status" hidden>Your email app should open with everything pre-filled. Just press send. If it didn’t open, use the WhatsApp button or email me directly below.</p>
+            </form>
+
+            <div class="direct-col reveal" style="--i:4">
+              <a class="direct-card direct-card--wa" href="https://wa.me/254741194375?text=Hi%20Clifford%2C%20I%27d%20like%20a%20quote%20for%20a%20website." target="_blank" rel="noopener">
+                <svg class="i-wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                <span><strong>WhatsApp</strong><span class="direct-sub">Replies within 24h</span></span>
+                <span class="direct-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="direct-card" href="tel:+254741194375">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+                <span><strong>Call me</strong><span class="direct-sub">+254 741 194 375</span></span>
+                <span class="direct-arrow" aria-hidden="true">→</span>
+              </a>
+              <div class="direct-card direct-card--email">
+                <a class="direct-main" href="mailto:Clifford242526@gmail.com?subject=Website%20enquiry">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                  <span><strong>Email</strong><span class="direct-sub">Clifford242526@gmail.com</span></span>
+                </a>
+                <button class="copy-btn" id="copy-email" type="button" aria-label="Copy email address" aria-live="polite">Copy</button>
+              </div>
+
+              <p class="direct-sub">Hiring? Send the role, the team and the stack to this inbox, or ask for my CV. I reply within a day.</p>
+
+              <p class="direct-sub">Collaborating, speaking or running a workshop? <a class="text-link" href="mailto:Clifford242526@gmail.com?subject=Collaboration%20request">Send a collaboration request</a> with a subject line of “Collaboration request” and tell me what you have in mind.</p>
+
+              <div class="socials socials--contact">
+                <p class="socials-label">Let’s connect</p>
+                <svg class="socials-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+                <div class="socials-row">
+                  <a href="https://github.com/Doc-Scripter" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                  <a href="https://twitter.com/Clifford_001" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg></a>
+                  <a href="https://www.linkedin.com/in/clifford-otieno-2a2986103" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                  <a href="https://dev.to/clifford_otieno" target="_blank" rel="noopener" aria-label="DEV.to" class="dev-glyph">DEV</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq reveal" style="--i:5">
+            <h2 class="block-title">Common questions</h2>
+            <details><summary>How much does a website cost?</summary><p>Every project is different, so I quote after a short chat about what you need. You’ll get a clear price and timeline before any work starts, no surprises.</p></details>
+            <details><summary>How long does it take?</summary><p>Most business websites take 1–3 weeks from first chat to going live. Bigger systems like booking or shops take a little longer, and I’ll give you an exact timeline in your quote.</p></details>
+            <details><summary>Do I need to understand tech?</summary><p>Not at all. I handle everything technical and explain each step in plain language. You focus on your business; I’ll focus on the technology.</p></details>
+            <details><summary>Do you build WordPress and WooCommerce websites?</summary><p>Yes. WordPress is a great choice when you want to update content yourself, and WooCommerce turns it into a full online shop. I design it, build it, and show you how to use it.</p></details>
+            <details><summary>Will my business show up on Google?</summary><p>I build every site with SEO from day one: fast pages, clear structure and the right keywords. And I offer ongoing SEO so customers in Kisumu and across Kenya find you on Google Search and Maps.</p></details>
+            <details><summary>Can you connect M-Pesa payments?</summary><p>Yes. I’ve integrated M-Pesa into booking systems and online shops, so your customers can pay the way they already trust.</p></details>
+            <details><summary>What is business intelligence, in plain language?</summary><p>It means turning the records you already have (sales, stock, customers) into simple dashboards and reports, so you can see what’s selling, what’s slow, and where the money goes.</p></details>
+            <details><summary>Can AI really help a small business?</summary><p>Yes, practical AI, not hype. Think a helper that answers customer questions, search that finds products by photo, or tools that read and summarise documents. I build it into the systems you already use.</p></details>
+            <details><summary>Do you work with businesses outside Kisumu?</summary><p>Yes. I’m based in Kisumu and work with clients across Kenya. Most projects run smoothly over WhatsApp, calls and shared previews.</p></details>
+            <details><summary>What happens after the website goes live?</summary><p>I don’t disappear. Care &amp; Growth covers updates, speed, security and support, and I can automate reminders, reports and follow-ups so the site keeps working for you.</p></details>
+          </div>
+
+          <footer class="panel-footer reveal" style="--i:6">
+            <p>© <span id="year">2026</span> Clifford Otieno · Kisumu, Kenya · Built by Doc-Scripter</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mobile bottom tabs -->
+    <nav class="tabbar" aria-label="Quick navigation">
+      <a href="#home" class="tab" data-panel="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5 9.5V21h5v-6h4v6h5V9.5"/></svg><span>Home</span></a>
+      <a href="#work" class="tab" data-panel="work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 12h18"/></svg><span>Work</span></a>
+      <a href="#services" class="tab" data-panel="services"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg><span>Services</span></a>
+      <a href="#experience" class="tab" data-panel="experience"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Experience</span></a>
+      <a href="#blog" class="tab" data-panel="blog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><span>Blog</span></a>
+      <a href="#about" class="tab" data-panel="about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg><span>About</span></a>
+      <a href="#contact" class="tab" data-panel="contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></a>
+    </nav>
   </div>
 
-  <section id="hero">
-    <div class="profile-image-container">
-      <img src="static/images/profile.jpg" alt="Clifford Otieno" class="profile-image">
-    </div>
-    <h1 class="title">Clifford Otieno</h1>
-    <div class="subtitle-container">
-      <p class="subtitle">Full Stack Developer</p>
-      <p class="subtitle">AI Enthusiast</p>
-      <p class="subtitle">Data Science Enthusiast</p>
-    </div>
-    <div id="intro">
-      <div id="shoutout">Scripting Doctor Here...</div>
-      <p>
-      Welcome to my digital realm. I am a software developer with a passion for crafting elegant code and building
-      innovative solutions.
-
-      From the moment I wrote my first line of code, I knew I was destined for greatness (or at least a decent cup of
-      tea). I thrive on turning complex problems into simple, user-friendly applications that make life easier and a bit
-      more fun.
-
-      <br>
-      When I'm not coding, you can find me exploring the latest tech trends, binge-watching sci-fi and anime series, or
-      attempting to perfect my tea-efication skills. Let's embark on this adventure together!
-      </p>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2 id="title">Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Languages</h3>
-        <ul>
-          <li>GOLANG (GO)</li>
-          <li>Rust</li>
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>SQL</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Frameworks & Libraries</h3>
-        <ul>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>Gin (Go)</li>
-          <li>Gorm (Go)</li>
-          <li>Tailwind CSS</li>
-          <li>Svelte</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Tools & Platforms</h3>
-        <ul>
-          <li>Git & GitHub</li>
-          <li>Docker</li>
-          <li>Kubernetes</li>
-          <li>AWS</li>
-          <li>Google Cloud Platform (GCP)</li>
-          <li>Postman</li>
-          <li>VS Code</li>
-          <li>Jira</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Databases</h3>
-        <ul>
-          <li>PostgreSQL</li>
-          <li>MySQL</li>
-          <li>SQLite</li>
-          <li>MongoDB</li>
-          <li>Redis</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Concepts & Methodologies</h3>
-        <ul>
-          <li>RESTful APIs</li>
-          <li>FastAPIs</li>
-          <li>Microservices</li>
-          <li>CI/CD</li>
-          <li>Agile/Scrum</li>
-          <li>Test-Driven Development (TDD)</li>
-          <li>Object-Oriented Programming (OOP)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2 id="title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card shimmer-effect">
-
-        <h3>FocusFlow</h3>
-        <p>
-          Productivity tool designed to help users manage their tasks and optimize their time efficiently
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Golang(GO)</span>
-          <span class="tech-tag">Javascript</span>
-          <span class="tech-tag">OpenAI</span>
-          <span class="tech-tag">Html5</span>
-          <span class="tech-tag">Css</span>
-
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Doc-Scripter/FocusFlow.git">View Repo</a>
-          <!-- <a href="https://project1-demo.com">Live Demo</a> -->
-        </div>
-      </div>
-
-      <div class="project-card shimmer-effect">
-
-        <h3>Contact-Management Application</h3>
-        <p>
-          A fully responsive e-commerce solution with real-time inventory
-          management and secure payment processing.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Golang(GO)</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Doc-Scripter/Contact-Management-Application.git">View Repo</a>
-          <!-- <a href="https://project2-demo.com">Live Demo</a> -->
-        </div>
-      </div>
-
-  </section>
-
-  <section id="articles">
-    <h2 id="title">Articles &amp; Blogs</h2>
-    <div class="articles-grid">
-      <div class="article-card shimmer-effect"
-        href="https://dev.to/luvdokta/data-science-isnt-just-for-math-nerds-49i4">
-        <div class="article-platform">DEV.TO</div>
-        <h3>Data Science Isn't Just for Math Nerds</h3>
-        <p>Clarification of the Maths Myth and misconceptions about Data Science.</p>
-        <div class="article-meta">
-          <span class="date">Sep 5 2024</span>
-          <a href="https://dev.to/luvdokta/data-science-isnt-just-for-math-nerds-49i4" class="read-link">Read
-            Article</a>
-        </div>
-      </div>
-      <div class="article-card shimmer-effect">
-        <div class="article-platform">GitHub README</div>
-        <h3>Writing Efficient Code</h3>
-        <p>
-          A comprehensive guide to Writing Efficient GO Code: Techniques for Best Practices
-        </p>
-        <div class="article-meta">
-          <span class="date">Sep 21 2024</span>
-          <a href="https://github.com/Doc-Scripter/Better-GO-Code.git" class="read-link">Read More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="journey">
-    <h2 id="title">My Journey</h2>
-    <div class="journey-container">
-      <div class="highlight-card">
-        <div class="highlight-header">
-          <h3 >
-            Presentation during Kisumu Gophers meetup at <a href="https://x.com/Zone01Kisumu">Zone01Kisumu</a>
-          </h3>
-          <div class="photo-indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4 5h3v13H4zm14 0h3v13h-3zM8 5h8v13H8z"></path>
-            </svg>
-            <span>View Photos</span>
-          </div>
-        </div>
-        <div class="photo-gallery">
-          <div class="highlight-photo shimmer-effect">
-            <img alt="Kisumu Gophers" src="static/images/GZ6rrn8WQAAf_85.jpg" />
-          </div>
-          <div class="highlight-photo shimmer-effect">
-            <img alt="Build with AI(GDG)" src="static/images/GZ6rvA4WcAASDth.jpg" />
-          </div>
-        </div>
-      </div>
-
-      <div class="highlight-card">
-        <div class="highlight-header">
-          <h3 >
-            Build with AI(GDG)
-          </h3>
-          <div class="photo-indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4 5h3v13H4zm14 0h3v13h-3zM8 5h8v13H8z"></path>
-            </svg>
-            <span>View Photos</span>
-          </div>
-        </div>
-        <div class="photo-gallery">
-          <div class="highlight-photo shimmer-effect">
-            <img alt="Teaching web development concepts" src="static/images/GSI-1151.jpg" />
-            />
-          </div>
-          <div class="highlight-photo shimmer-effect">
-            <img alt="Teaching web development concepts" src="static/images/GSI-1292.JPG" />
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <section id="footer">
-    <h2 id="footer-title">Before you go ...</h2>
-    <div class="footer-content">
-      <div class="footer-left">
-        <h3>lets connect</h3>
-        <div class="social-links">
-          <a href="https://github.com/Doc-Scripter/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
-              </path>
-            </svg>
-          </a>
-          <a href="https://twitter.com/Clifford_001">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-              </path>
-            </svg>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/clifford-otieno-2a2986103?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bx97tGEyFROmnMptCFtPACA%3D%3D">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
-              </path>
-            </svg>
-          </a>
-          <!-- <a href="https://dev.to/luvdokta">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
-            </svg>
-          </a> -->
-          <a href="mailto:clifford.otieno@example.com">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-right">
-        <div><h3>Resume</h3>
-          </div>
-        <div>
-          </div>
-        <div id="footer-download-btn"><a href="static/assets/Clifford-Otieno-Resume.pdf" download="Clifford-Otieno-Resume.pdf" class="download-btn">
-          Download Resume
-        </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <script src="static/scripts/script.js"></script>
+  <script src="static/scripts/app.js?v=9"></script>
 </body>
 
 </html>
