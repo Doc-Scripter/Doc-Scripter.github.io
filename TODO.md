@@ -8,20 +8,41 @@
 - [x] Reorder services: SEO first, Branding second, Maintenance & Growth third; rename "Care & Growth" everywhere (card, select, FAQ, JSON-LD). `index.html`
 - [x] Restore shared card hover recipe `scale(1.02)` + red glow on work/service/blog/journey/enquiry cards. `static/styles/main.css`
 - [x] Remove the "DEV.to" cover placeholder for posts without images. `static/scripts/app.js`, `static/styles/main.css`
-- [x] Fix blog card layout: cards without a cover image now size to their content (`grid-auto-rows: auto`), no dead space. `static/styles/main.css`
+- [x] Fix blog card layout: cards without a cover image now size to their content (`grid-auto-rows: auto; align-items: start`), masonry grid via `repeat(auto-fill, minmax(270px, 1fr))`. `static/styles/main.css`
 - [x] Regenerate OG cover with "CLIFFORD OTIENO" prominent instead of "DOC-SCRIPTER". `static/images/og-cover.jpg`
-- [x] Bump asset cache-bust (`?v=16` for main.css and app.js, `?v=4` for og:image/twitter:image). `index.html`
+- [x] Bump asset cache-bust. `index.html`
 - [x] Trim meta/OG descriptions to 152 chars so the "open to full-time roles" line survives truncation. `index.html`
 - [x] Rewrite panel titles with stronger punchlines: home "I build technology that earns money.", blog "Practical insights from real builds.", contact "Let's work together." `index.html`
 - [x] Add "Machine Learning" tag to the Twynon card and "full stack engineering" to the About paragraph. `index.html`
-- [x] Fix reveal failsafe: it no longer unobserves or force-reveals off-screen elements, so scroll-reveal still animates; keyboard focus reveals a pending element. `static/scripts/app.js`
+- [x] Fix reveal failsafe: it no longer unobserves or force-reveals off-screen elements, counters write their final value before animating, blog card indices no longer collide with the panel header, and keyboard focus reveals a pending element. `static/scripts/app.js`
 - [x] Fix stat counters showing "0" when requestAnimationFrame is starved (final value written first + timeout safety net). `static/scripts/app.js`
 - [x] Fix blog card reveal index colliding with panel header indices. `static/scripts/app.js`
 - [x] Dedicated briefcase icon class for the topbar Hire Me button. `index.html`, `static/styles/main.css`
-- [x] Fix topbar overflow at 320px (fits at 320, no clipped menu button) and the cramped bottom tab bar. `static/styles/main.css`
+- [x] Fix topbar overflow at 320px so the menu button is not clipped; fix cramped bottom tab bar. `static/styles/main.css`
 - [x] Raise `.eyebrow` contrast to `var(--cta-hover)` so it passes AA on `--bg-2`. `static/styles/main.css`
-- [x] On narrow screens show the headline before the portrait and shrink both the portrait and the two title sizes. `static/styles/main.css`
+- [x] On narrow screens show the headline before the portrait and shrink both the headline and the two title sizes. `static/styles/main.css`
 - [x] Mark `minimax-m3.1-flash` unreliable in `memory.md`; use the other verified nvidia models. `memory.md`
 - [x] Verify in browser at 320px: no horizontal overflow on any panel, scroll-reveal still animates, counters reach final values, blog cards size to content, zero em dashes, Lighthouse 1.0 / 1.0 / 1.0.
-- [x] Review the social cover: solid theme background and letters, theme-red underline instead of gold, no gradient or glow, complete two-line service copy. `static/images/og-cover.jpg`, `index.html`
-- [ ] Commit the batch with conventional commit messages and push to `origin/main`.
+- [x] Refactor hero layout: photo now below headline on mobile (flex column-reverse), tighten lead copy. `static/styles/main.css`, `index.html`
+- [x] Fix blog card layouts with masonry grid. `static/styles/main.css`
+- [x] Remove the CV paragraph from Experience panel (redundant with other contact options). `index.html`
+- [x] Review social cover with theme palette, solid underline, no open-to-work text. `static/images/og-cover.jpg`, `index.html`
+- [x] Add data modelling and project management to the About paragraph. `index.html`
+- [x] Improve Experience CTA: better copy, WhatsApp/email CV options. `index.html`
+- [x] Move Hire Me to primary CTA button on home page (top-ranking). `index.html`
+- [x] Commit the batch with conventional commit messages and push to `origin/main`.
+
+**All tasks complete.** All pushed to `origin/main` (status: up to date).
+
+**Commits pushed**:
+1. `763ad70 chore: add agent workflow guidance and verified model notes`
+2. `d8d2feb docs: refresh README, task list and model notes`
+3. `7b2f214 chore: add agent workflow guidance and verified model notes` (original base)
+4. `66959c6 docs: record the cover review in the task list`
+5. `fa32c51 feat(brand): rebuild the social cover on the theme palette`
+6. `df4f3bc fix(ui): keep scroll reveal alive and fit the shell at 320px`
+7. `d554d87 feat(copy): sharpen page titles and widen the hire-me pitch`
+8. `de14f55 refactor(ui): move hero photo below headline, tighten copy, fix blog card layouts`
+9. `c9fe142 fix(responsive): blog grid uses true masonry with repeat(auto-fill)`
+
+All pushed to `origin/main` (status: up to date).
