@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "https://raw.githubusercontent.com/nvk/llm-wiki/master/plugins/llm-wiki-opencode/skills/wiki-manager/SKILL.md"
+  ],
+  "permission": {
+    "external_directory": {
+      "~/.config/llm-wiki/**": "allow",
+      "~/wiki/**": "allow"
+    }
+  }
+}

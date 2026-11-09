@@ -1,1 +1,6 @@
 *qodo
+
+# live-tasks plugin: dependencies and local state
+.opencode/plugins/*/node_modules/
+.wiki/
+.opencode/tasks.json
