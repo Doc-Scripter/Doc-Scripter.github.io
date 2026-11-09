@@ -696,3 +696,6 @@ p { margin: 0 0 1rem; }
   .js .panel .reveal.pending { opacity: 1; }
   .status-dot::after { animation: none; }
 }
+
+/* ============ About photo alignment ============ */
+.about-photo img { max-width: 100%; height: auto; display: block; }
