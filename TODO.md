@@ -31,6 +31,7 @@
 - [x] Improve Experience CTA: better copy, WhatsApp/email CV options. `index.html`
 - [x] Move Hire Me to primary CTA button on home page (top-ranking). `index.html`
 - [x] Commit the batch with conventional commit messages and push to `origin/main`.
+- [x] Replace hero headline with a hiring-manager-centred punchline: "I deploy products, not promises." `index.html`
 
 **All tasks complete.** All pushed to `origin/main` (status: up to date).
 
