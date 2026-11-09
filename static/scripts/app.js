@@ -5,7 +5,7 @@
 
   const PANELS = ['home', 'work', 'services', 'experience', 'blog', 'about', 'contact'];
   const TITLES = {
-    home: 'Clifford Otieno (Doc-Scripter) | IT Consultancy, Business Intelligence, Applied AI Systems & Business Automation | Kisumu, Kenya',
+    home: 'Clifford Otieno (Doc-Scripter) | IT Consultancy, Business Intelligence, Applied AI Systems & Business Automation | Kenya',
     work: 'Previous Work | Doc-Scripter | Live Websites for Kenyan Businesses',
     services: 'Services | Doc-Scripter | Websites, WordPress, SEO, BI & Automation',
     experience: 'Experience | Doc-Scripter | Professional Experience',
@@ -33,6 +33,7 @@
   const revealTimers = new WeakMap(); // panel -> failsafe timeout id
   const revealSeq = new WeakMap();    // panel -> next stagger index
   let revealIO = null;
+  let ioFired = false;
 
   if ('IntersectionObserver' in window && !reduced.matches) {
     revealIO = new IntersectionObserver(batch => {
@@ -43,6 +44,7 @@
         // A panel that is not active keeps its elements observed and pending
         // so they can still be revealed when that panel is visited later.
         if (!panel || !panel.classList.contains('is-active')) return;
+        ioFired = true;
         revealIO.unobserve(el);
         revealNow(panel, el);
       });
@@ -75,6 +77,15 @@
     el.classList.add('in');
   }
 
+  // Keyboard focus must never land on an element that is still hidden, so a
+  // focused pending element is revealed on the spot.
+  document.addEventListener('focusin', e => {
+    const el = e.target && e.target.closest ? e.target.closest('.reveal.pending') : null;
+    if (!el) return;
+    const panel = el.closest('.panel');
+    if (panel) revealNow(panel, el);
+  });
+
   function clearFailsafe(panel) {
     const id = revealTimers.get(panel);
     if (id !== undefined) {
@@ -90,12 +101,57 @@
     clearFailsafe(panel);
     const id = setTimeout(() => {
       revealTimers.delete(panel);
+
+      if (revealIO && !ioFired) {
+        // Starved observer: install a scroll fallback on the panel itself
+        // (.js .panel is the scroll container, not the window)
+        panel.addEventListener('scroll', function revealOnScroll() {
+          const rect = panel.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+          panel.querySelectorAll('.reveal.pending').forEach(el => {
+            const elRect = el.getBoundingClientRect();
+            if (elRect.top >= 0 && elRect.top < viewportHeight) {
+              revealNow(panel, el);
+              revealIO?.unobserve(el);
+              panel.removeEventListener('scroll', revealOnScroll);
+            }
+          });
+        }, { passive: true });
+      }
+
       panel.querySelectorAll('.reveal').forEach(el => {
-        const stuck = getComputedStyle(el).opacity === '0';
-        if (!el.classList.contains('in') || stuck) {
-          if (revealIO) revealIO.unobserve(el);
-          if (stuck) el.style.setProperty('animation', 'none');
+        const elRect = el.getBoundingClientRect();
+        const isOnScreen = elRect.top >= 0 && elRect.top < window.innerHeight;
+
+        if (!el.classList.contains('in') && !isOnScreen) {
+          // Element is off-screen and not yet revealed - leave it pending and observed
+          return;
+        }
+
+        if (el.classList.contains('in') && getComputedStyle(el).opacity === '0') {
+          // Element is marked .in but frozen at opacity 0: unblock by setting
+          // animation: none and opacity: 1 inline. The inline animation override
+          // will be removed on the next reveal attempt.
+          el.style.setProperty('animation', 'none');
+          el.style.setProperty('opacity', '1');
           revealNow(panel, el);
+          return;
+        }
+
+        if (!el.classList.contains('in')) {
+          // Element is either on screen or has .in already - only reveal on-screen
+          // elements in the failsafe so off-screen ones stay pending for IntersectionObserver.
+          if (isOnScreen) {
+            if (revealIO) revealIO.unobserve(el);
+            revealNow(panel, el);
+          }
+          return;
+        }
+
+        // Element already has .in and is not frozen - it is either on-screen or
+        // should remain pending until the user scrolls it into view.
+        if (isOnScreen) {
+          // Already revealed and visible on screen - nothing to do.
         }
       });
     }, REVEAL_FAILSAFE);
@@ -224,6 +280,11 @@
       const target = Number(el.dataset.count);
       const suffix = el.dataset.suffix || '';
       if (reduced.matches) { el.textContent = target + suffix; return; }
+
+      // Write the final truthful value first as a safety net so the element
+      // is never permanently stuck at 0 if rAF starves.
+      el.textContent = target + suffix;
+
       const dur = 900;
       const t0 = performance.now();
       const tick = now => {
@@ -233,6 +294,12 @@
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
+
+      // Safety net: force the final value if the animation did not complete
+      // within the allotted duration.
+      setTimeout(() => {
+        el.textContent = target + suffix;
+      }, dur + 250);
     });
   }
 
@@ -267,13 +334,16 @@
       try {
         const ctrl = new AbortController();
         const timer = setTimeout(() => ctrl.abort(), 9000);
-        const res = await fetch(BLOG_API, { signal: ctrl.signal });
-        clearTimeout(timer);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
-        if (!Array.isArray(data) || !data.length) throw new Error('empty feed');
-        articles = data;
-        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), data })); } catch (err) { /* storage full/blocked */ }
+        try {
+          const res = await fetch(BLOG_API, { signal: ctrl.signal });
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const data = await res.json();
+          if (!Array.isArray(data) || !data.length) throw new Error('empty feed');
+          articles = data;
+          try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), data })); } catch (err) { /* storage full/blocked */ }
+        } finally {
+          clearTimeout(timer);
+        }
       } catch (err) {
         articles = null;
       }
@@ -289,7 +359,9 @@
 
     grid.textContent = '';
     const frag = document.createDocumentFragment();
-    let cardIndex = 0;
+    const blogPanel = grid.closest('.panel');
+    const baseIndex = revealSeq.get(blogPanel) || 0;
+    let cardIndex = baseIndex;
     for (const a of articles) {
       const card = document.createElement('article');
       card.className = 'blog-card reveal';
@@ -303,19 +375,9 @@
         img.decoding = 'async';
         img.width = 640; img.height = 360;
         img.addEventListener('error', () => {
-          const ph = document.createElement('div');
-          ph.className = 'blog-cover blog-cover--empty';
-          ph.setAttribute('aria-hidden', 'true');
-          ph.textContent = 'DEV.to';
-          img.replaceWith(ph);
+          img.remove();
         });
         card.appendChild(img);
-      } else {
-        const ph = document.createElement('div');
-        ph.className = 'blog-cover blog-cover--empty';
-        ph.setAttribute('aria-hidden', 'true');
-        ph.textContent = 'DEV.to';
-        card.appendChild(ph);
       }
       const body = document.createElement('div');
       body.className = 'blog-body';
@@ -357,7 +419,6 @@
     }
     grid.appendChild(frag);
     // The cards arrive after the panel was armed, so arm them on their own.
-    const blogPanel = grid.closest('.panel');
     if (blogPanel) {
       const active = blogPanel.classList.contains('is-active');
       if (active || !revealIO || reduced.matches) {
@@ -435,6 +496,7 @@
     document.getElementById(el === fName ? 'f-name-error' : 'f-message-error').hidden = true;
   }));
 
+  let copyResetTimer = 0;
   copyBtn.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(EMAIL);
@@ -450,7 +512,8 @@
     }
     copyBtn.textContent = 'Copied!';
     copyBtn.classList.add('copied');
-    setTimeout(() => {
+    clearTimeout(copyResetTimer);
+    copyResetTimer = setTimeout(() => {
       copyBtn.textContent = 'Copy';
       copyBtn.classList.remove('copied');
     }, 2000);
