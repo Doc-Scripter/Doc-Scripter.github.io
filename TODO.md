@@ -1,0 +1,26 @@
+# TODO
+
+- [x] Kenya-wide positioning instead of "Kisumu based" (title, meta, OG, twitter, JSON-LD, sidebar, hero eyebrow, about, footer, README). `index.html`, `README.md`
+- [x] Remove both new home CTA bands (open-to-work band, collaboration band). `index.html`
+- [x] Add "Hire Me" button to topbar and to hero CTA row. `index.html`
+- [x] Move topbar "Hire Me" to the start (right after brand) instead of the middle. `static/styles/main.css`, `index.html`
+- [x] Split hero lead so the open-to-work sentence is its own second paragraph. `index.html`
+- [x] Reorder services: SEO first, Branding second, Maintenance & Growth third; rename "Care & Growth" everywhere (card, select, FAQ, JSON-LD). `index.html`
+- [x] Restore shared card hover recipe `scale(1.02)` + red glow on work/service/blog/journey/enquiry cards. `static/styles/main.css`
+- [x] Remove the "DEV.to" cover placeholder for posts without images. `static/scripts/app.js`, `static/styles/main.css`
+- [x] Fix blog card layout: cards without a cover image now size to their content (`grid-auto-rows: auto`), no dead space. `static/styles/main.css`
+- [x] Regenerate OG cover with "CLIFFORD OTIENO" prominent instead of "DOC-SCRIPTER". `static/images/og-cover.jpg`
+- [x] Bump asset cache-bust (`?v=16` for main.css and app.js, `?v=4` for og:image/twitter:image). `index.html`
+- [x] Trim meta/OG descriptions to 152 chars so the "open to full-time roles" line survives truncation. `index.html`
+- [x] Rewrite panel titles with stronger punchlines: home "I build technology that earns money.", blog "Practical insights from real builds.", contact "Let's work together." `index.html`
+- [x] Add "Machine Learning" tag to the Twynon card and "full stack engineering" to the About paragraph. `index.html`
+- [x] Fix reveal failsafe: it no longer unobserves or force-reveals off-screen elements, so scroll-reveal still animates; keyboard focus reveals a pending element. `static/scripts/app.js`
+- [x] Fix stat counters showing "0" when requestAnimationFrame is starved (final value written first + timeout safety net). `static/scripts/app.js`
+- [x] Fix blog card reveal index colliding with panel header indices. `static/scripts/app.js`
+- [x] Dedicated briefcase icon class for the topbar Hire Me button. `index.html`, `static/styles/main.css`
+- [x] Fix topbar overflow at 320px (fits at 320, no clipped menu button) and the cramped bottom tab bar. `static/styles/main.css`
+- [x] Raise `.eyebrow` contrast to `var(--cta-hover)` so it passes AA on `--bg-2`. `static/styles/main.css`
+- [x] On narrow screens show the headline before the portrait and shrink both the portrait and the two title sizes. `static/styles/main.css`
+- [x] Mark `minimax-m3.1-flash` unreliable in `memory.md`; use the other verified nvidia models. `memory.md`
+- [x] Verify in browser at 320px: no horizontal overflow on any panel, scroll-reveal still animates, counters reach final values, blog cards size to content, zero em dashes, Lighthouse 1.0 / 1.0 / 1.0.
+- [ ] Commit the batch with conventional commit messages and push to `origin/main`.

@@ -4,18 +4,26 @@ Probed: 2026-11-08 · Scope: `nvidia` provider
 Method: concurrent `subagent` calls, one model each, prompt `"Reachable: <capital of Japan>"`, no tools, 2-minute cap.
 Modality re-verified 2026-11-08: each model asked to `Read` a generated PNG (`ZORBAK-7391` on green) and report what it saw.
 
-## ✅ Verified working (8)
+## ✅ Verified working (7)
 
 | Model ID | Input | Notes |
 |---|---|---|
 | `nvidia/stepfun-ai/step-5-preview` | text + image | Parent model running the main thread — use as orchestrator, don't dispatch as a child |
-| `nvidia/minimaxai/minimax-m3.1-flash` | text + image | Fast, clean single-line replies |
 | `nvidia/nvidia/nemotron-3.5-lightning-30b-a3b` | **text only** | **Safest default pick** for small/fast children |
 | `nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b` | text + image | VL = vision-language; named for it, confirmed by probe |
 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | **text only** | Heaviest Nemotron tier, but cannot read images |
 | `nvidia/meta/muse-glimmer-30b` | text + image | Name gives no modality hint — vision confirmed empirically |
 | `nvidia/poolside/laguna-xs-2.1` | **text only** | See note 4 — its vision answer is a false positive |
 | `nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | text + image | "Omni" = multimodal |
+
+## ❌ Marked unreliable
+
+| Model ID | Why |
+|---|---|
+| `nvidia/minimaxai/minimax-m3.1-flash` | Unreliable in this repo. User-marked unreliable 2026-11-09. Do not dispatch. |
+
+Replacement picks for its old slot (general implementation, text only): `nvidia/nvidia/nemotron-3-ultra-550b-a55b`
+(heavy) or `nvidia/meta/muse-glimmer-30b` (general, also reads images).
 
 **Text-only models:** `nemotron-3.5-lightning-30b-a3b`, `nemotron-3-ultra-550b-a55b`, `poolside/laguna-xs-2.1`
 **Can read images:** the other five above.

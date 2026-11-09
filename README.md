@@ -1,6 +1,6 @@
 # Doc-Scripter · Clifford Otieno
 
-**IT consultant in Kisumu, Kenya.** IT consultancy, business intelligence, applied AI systems and business automation, plus fast, easy-to-use websites, WordPress & WooCommerce shops, booking systems and SEO for Kenyan businesses. Also open to full-time roles in IT, backend engineering, business intelligence and applied AI.
+**IT consultant in Kenya.** IT consultancy, business intelligence, applied AI systems and business automation, plus fast, easy-to-use websites, WordPress & WooCommerce shops, booking systems and SEO for Kenyan businesses. Also open to full-time roles in IT, backend engineering, business intelligence and applied AI.
 
 Live site: **https://doc-scripter.github.io/**
 
@@ -17,7 +17,7 @@ A fixed-shell, single-page portfolio. Instead of one long scroll, seven panels s
 | Home | `#home` | Consultancy headline, four specialism pillars, quote CTAs, stats, tech marquee |
 | Previous Work | `#work` | Live client websites only: screenshots + outcomes + links |
 | Services | `#services` | Twelve services (incl. WordPress/WooCommerce, BI, applied AI, automation), each with a prefilled WhatsApp quote link |
-| Experience | `#experience` | Professional journey: consultancy, community speaking, GDG facilitation, technical writing |
+| Experience | `#experience` | Professional journey: consultancy and technical writing |
 | Blog | `#blog` | Articles auto-pulled from my DEV.to account |
 | About | `#about` | Story, skills, community journey, resume download |
 | Contact | `#contact` | Smart enquiry form, direct WhatsApp/email, 10-question FAQ |
@@ -77,7 +77,7 @@ Then open http://localhost:4173/. No install or build step is required.
 
 ## SEO: on-page (already shipped)
 
-- Title, meta description and canonical naming "Clifford Otieno" + services + Kisumu, Kenya.
+- Title, meta description and canonical naming "Clifford Otieno" + services + Kenya, with local detail in the FAQ and structured data.
 - Open Graph / Twitter card with a branded share image.
 - JSON-LD `@graph`: `Person`, `ProfessionalService` (all twelve services in an offer catalog), `WebSite` and `FAQPage` (mirrors the on-page FAQ).
 - `sitemap.xml` + `robots.txt`.
