@@ -23,4 +23,5 @@
 - [x] On narrow screens show the headline before the portrait and shrink both the portrait and the two title sizes. `static/styles/main.css`
 - [x] Mark `minimax-m3.1-flash` unreliable in `memory.md`; use the other verified nvidia models. `memory.md`
 - [x] Verify in browser at 320px: no horizontal overflow on any panel, scroll-reveal still animates, counters reach final values, blog cards size to content, zero em dashes, Lighthouse 1.0 / 1.0 / 1.0.
+- [x] Review the social cover: solid theme background and letters, theme-red underline instead of gold, no gradient or glow, complete two-line service copy. `static/images/og-cover.jpg`, `index.html`
 - [ ] Commit the batch with conventional commit messages and push to `origin/main`.
