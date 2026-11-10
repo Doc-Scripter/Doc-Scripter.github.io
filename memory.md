@@ -62,7 +62,7 @@ flowchart TD
     B -->|fast search or edit, text only| D[nemotron-3.5-lightning-30b-a3b]
     B -->|general implementation, text only| E[laguna-xs-2.1]
     B -->|heavy reasoning, text only| F[nemotron-3-ultra-550b-a55b]
-    B -->|needs to read an image or screenshot| G[super-vl / omni / muse-glimmer / minimax / step-5]
+    B -->|needs to read an image or screenshot| G[super-vl / omni / muse-glimmer / step-5]
     B -->|anything else| H{pick from the verified table above}
 ```
 
