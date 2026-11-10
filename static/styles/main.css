@@ -502,11 +502,15 @@ p { margin: 0 0 1rem; }
 @keyframes shimmer { 50% { opacity: .55; } }
 
 /* ============ About ============ */
-.about-grid { display: grid; grid-template-columns: 1fr; gap: clamp(1rem, min(2vw, 3vh), 2rem); align-items: start; }
-.about-photo img { width: 100%; height: auto; max-width: min(300px, 42vh); border-radius: var(--radius); border: 1px solid var(--line-strong); display: block; }
+.about-grid { display: flow-root; }
+.about-photo { float: right; width: clamp(150px, 34%, 270px); margin: .4rem 0 1rem 1.5rem; shape-outside: margin-box; }
+.about-photo img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line-strong); display: block; }
 .about-story p { color: var(--text-dim); line-height: 1.7; }
 .about-story strong { color: var(--text); }
 .about-story .btn { margin-top: .5rem; }
+@media (max-width: 620px) {
+  .about-photo { float: none; width: min(240px, 62%); margin: 0 auto 1rem; }
+}
 
 .skill-groups { display: grid; grid-template-columns: 1fr; gap: clamp(0.8rem, min(1.2vw, 1.8vh), 1.4rem); }
 .skill-group h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-faint); margin: 0 0 .65rem; font-family: var(--font-body); font-weight: 600; }
@@ -609,7 +613,7 @@ p { margin: 0 0 1rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(3, 1fr); }
-  .about-grid { grid-template-columns: 300px 1fr; }
+  .about-grid { display: flow-root; }
   .skill-groups { grid-template-columns: repeat(2, 1fr); }
   .journey-grid { grid-template-columns: repeat(2, 1fr); }
 }
