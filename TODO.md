@@ -32,6 +32,14 @@
 - [x] Move Hire Me to primary CTA button on home page (top-ranking). `index.html`
 - [x] Commit the batch with conventional commit messages and push to `origin/main`.
 - [x] Replace hero headline with a hiring-manager-centred punchline: "I deploy products, not promises." `index.html`
+- [x] About: let the portrait float inside the copy so the text wraps around it at its position (stacks above the text under 620px). `static/styles/main.css`
+- [x] About: restore the "I build for real businesses" sentence and the open-to-full-time line, curly apostrophes. `index.html`
+- [x] Experience: add the Zone01 Technical Project Manager & Full Stack Developer role. `index.html`
+- [x] Experience: add the DataSeal Data Engineer role (data modelling, star/snowflake, ETL). `index.html`
+- [x] Experience: add the KALRO ICT Assistant role and refresh the panel eyebrow/lead. `index.html`
+- [x] Remove the DOC-SCRIPTER word from the brand lockup; the sidebar shows "Clifford Otieno" and the rail/topbar show the portrait mark only. `index.html`, `static/styles/main.css`
+- [x] Rename the last two "Get a Quote" buttons (sidebar and topbar) to "Let's Talk". `index.html`
+- [x] Verify: no overflow at 1440/1024/768/414/320, reveals still fire, zero em dashes, AI-tells checker CLEAN (0 RED / 0 WARN), then commit and push. 
 
 **All tasks complete.** All pushed to `origin/main` (status: up to date).
 
