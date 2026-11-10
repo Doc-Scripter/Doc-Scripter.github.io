@@ -39,6 +39,7 @@
 - [x] Experience: add the KALRO ICT Assistant role and refresh the panel eyebrow/lead. `index.html`
 - [x] Remove the DOC-SCRIPTER word from the brand lockup; the sidebar shows "Clifford Otieno" and the rail/topbar show the portrait mark only. `index.html`, `static/styles/main.css`
 - [x] Rename the last two "Get a Quote" buttons (sidebar and topbar) to "Let's Talk". `index.html`
+- [x] Remove the pulsing status dot and the "Based in Kenya" prefix from the sidebar note, which now reads only "Open to full-time roles". `index.html`, `static/styles/main.css`
 - [x] Verify: no overflow at 1440/1024/768/414/320, reveals still fire, zero em dashes, AI-tells checker CLEAN (0 RED / 0 WARN), then commit and push. 
 
 **All tasks complete.** All pushed to `origin/main` (status: up to date).

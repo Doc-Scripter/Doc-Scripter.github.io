@@ -206,16 +206,7 @@ p { margin: 0 0 1rem; }
 .nav-link[aria-current="page"] .nav-num { color: var(--cta-hover); }
 
 .side-foot { margin-top: auto; padding-top: 1.5rem; display: flex; flex-direction: column; gap: .9rem; }
-.status-line { display: flex; align-items: center; gap: .45rem; font-size: .72rem; color: var(--text-faint); margin: 0; line-height: 1.4; }
-.status-dot { position: relative; width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--success); }
-.status-dot::after {
-  content: ""; position: absolute; inset: 0; border-radius: 50%;
-  background: var(--success); animation: ping 2.4s ease-out infinite;
-}
-@keyframes ping {
-  0% { transform: scale(1); opacity: .45; }
-  70%, 100% { transform: scale(2.6); opacity: 0; }
-}
+.status-line { font-size: .72rem; color: var(--text-faint); margin: 0; line-height: 1.4; }
 
 /* ============ Mobile top bar + tabs + sheet ============ */
 .topbar {
@@ -697,7 +688,6 @@ p { margin: 0 0 1rem; }
   .marquee-toggle { display: none; }
   .js .panel .reveal { opacity: 1; }
   .js .panel .reveal.pending { opacity: 1; }
-  .status-dot::after { animation: none; }
 }
 
 /* ============ About photo alignment ============ */
