@@ -633,7 +633,7 @@ p { margin: 0 0 1rem; }
   .side-foot .btn { width: 100%; height: auto; min-height: 48px; padding: 0 20px; border-radius: 999px; }
   .side-foot .btn-text { display: inline; }
 
-  .hero-grid { grid-template-columns: 1.25fr .75fr; gap: clamp(1.5rem, 3vh, 3rem); }
+  .hero-grid { gap: clamp(1.5rem, 3vh, 3rem); }
   .hero-photo { order: 0; }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(3, 1fr); }
@@ -681,7 +681,7 @@ p { margin: 0 0 1rem; }
   .tab svg { width: 18px; height: 18px; }
   .hero-title { font-size: clamp(1.7rem, 8vw, 2.4rem); }
   .panel-title { font-size: clamp(1.45rem, 6.6vw, 2rem); }
-  .hero-photo { order: -1; }
+  .hero-photo { order: 1; }
   .photo-ring { width: min(180px, 52vw, 26vh); padding: 4px; }
 }
 
